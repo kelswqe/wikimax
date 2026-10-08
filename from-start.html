@@ -1,0 +1,668 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>С чего всё началось — 108 дней</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            background: #f7f3ed;
+            color: #29251f;
+        }
+
+
+        header {
+            background: white;
+            border-bottom: 1px solid #ddd6cc;
+            padding: 22px 45px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            font-family: "Manrope", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #60482f;
+        }
+
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+
+        nav a {
+            color: #5f5040;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        nav a:hover {
+            color: #a67c52;
+        }
+
+
+        .languages {
+            display: flex;
+            gap: 6px;
+            margin-left: 10px;
+        }
+
+
+        .languages button {
+            border: 1px solid #d5c8b9;
+            background: white;
+            color: #60482f;
+
+            padding: 6px 9px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        .languages button.active {
+            background: #60482f;
+            color: white;
+        }
+
+
+        main {
+            max-width: 950px;
+            margin: 60px auto;
+            padding: 0 20px 80px;
+        }
+
+
+        .back {
+            display: inline-block;
+
+            margin-bottom: 25px;
+
+            color: #765536;
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+
+        .article {
+            background: white;
+
+            border: 1px solid #ddd6cc;
+
+            border-radius: 22px;
+
+            padding: 60px;
+        }
+
+
+        h1 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 48px;
+
+            line-height: 1.12;
+
+            letter-spacing: -1px;
+
+            font-weight: 700;
+
+            color: #4e3b29;
+
+            margin: 0 0 25px;
+        }
+
+
+        .intro {
+            background: #f1e9df;
+
+            border-left: 4px solid #a67c52;
+
+            border-radius: 0 15px 15px 0;
+
+            padding: 24px;
+
+            font-size: 19px;
+
+            line-height: 1.65;
+
+            margin-bottom: 55px;
+        }
+
+
+        h2 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 29px;
+
+            line-height: 1.25;
+
+            font-weight: 600;
+
+            color: #60482f;
+
+            margin-top: 55px;
+
+            margin-bottom: 18px;
+        }
+
+
+        p {
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            font-weight: 400;
+
+            color: #4e4943;
+
+            margin: 16px 0;
+        }
+
+
+        .quote {
+            background: #eee5d9;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            margin: 30px 0;
+
+            font-size: 19px;
+
+            line-height: 1.6;
+
+            font-weight: 500;
+
+            color: #60482f;
+        }
+
+
+        footer {
+            background: #3f3429;
+
+            color: #eee7df;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 18px 20px;
+
+                flex-wrap: wrap;
+
+                gap: 15px;
+            }
+
+
+            nav {
+                width: 100%;
+
+                justify-content: space-between;
+
+                gap: 10px;
+            }
+
+
+            nav a {
+                font-size: 14px;
+            }
+
+
+            main {
+                margin: 25px auto;
+
+                padding: 0 15px 45px;
+            }
+
+
+            .article {
+                padding: 30px 22px;
+
+                border-radius: 16px;
+            }
+
+
+            h1 {
+                font-size: 36px;
+            }
+
+
+            h2 {
+                font-size: 25px;
+            }
+
+
+            p {
+                font-size: 17px;
+
+                line-height: 1.7;
+            }
+
+
+            .intro {
+                font-size: 18px;
+            }
+
+
+            .quote {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        108 дней благодарности
+    </div>
+
+
+    <nav>
+
+        <a href="index.html" id="home">
+            Главная
+        </a>
+
+
+        <a href="story.html" id="story">
+            История
+        </a>
+
+
+        <a href="days.html" id="days">
+            108 дней
+        </a>
+
+
+        <div class="languages">
+
+            <button onclick="setLanguage('ru')" id="ru">
+                RU
+            </button>
+
+            <button onclick="setLanguage('ua')" id="ua">
+                UA
+            </button>
+
+            <button onclick="setLanguage('en')" id="en">
+                EN
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <a href="index.html" class="back" id="back">
+        ← Вернуться на главную
+    </a>
+
+
+    <article class="article">
+
+
+        <h1 id="title">
+            С чего всё началось
+        </h1>
+
+
+        <div class="intro" id="intro">
+
+            История началась с Любы,
+            которая находилась в Турции
+            и однажды увидела в Instagram
+            практику 108 благодарностей.
+
+        </div>
+
+
+        <h2 id="firstTitle">
+            Люба в Турции
+        </h2>
+
+
+        <p id="firstText">
+
+            Люба находилась в Турции,
+            когда впервые увидела информацию
+            о практике 108 благодарностей.
+
+        </p>
+
+
+        <h2 id="instagramTitle">
+            Instagram и новая идея
+        </h2>
+
+
+        <p id="instagramText">
+
+            Информацию о практике Люба увидела
+            в Instagram.
+
+            Её заинтересовала идея каждый день
+            писать благодарности, и она решила
+            попробовать.
+
+        </p>
+
+
+        <div class="quote" id="quote">
+
+            108 благодарностей —
+            каждый день замечать то,
+            за что ты можешь быть благодарен.
+
+        </div>
+
+
+        <h2 id="startTitle">
+            Первые благодарности
+        </h2>
+
+
+        <p id="startText">
+
+            Люба начала писать благодарности
+            каждый день.
+
+            Постепенно эта практика стала
+            частью её жизни.
+
+        </p>
+
+
+        <h2 id="tanyaTitle">
+            Люба рассказывает Тане
+        </h2>
+
+
+        <p id="tanyaText">
+
+            Позже Люба рассказала об этой практике
+            своей сестре Тане.
+
+            Таня тоже решила начать писать
+            благодарности.
+
+        </p>
+
+
+        <h2 id="endTitle">
+            Так началась история двух сестёр
+        </h2>
+
+
+        <p id="endText">
+
+            Сначала свой путь начала Люба.
+
+            Затем к практике присоединилась Таня.
+
+            Так простая ежедневная практика
+            стала началом истории двух сестёр
+            и их 108 дней благодарности.
+
+        </p>
+
+
+    </article>
+
+
+</main>
+
+
+<footer>
+
+    <span id="footer1">
+        108 дней благодарности
+    </span>
+
+    <br>
+
+    <span id="footer2">
+        История Любы и Тани
+    </span>
+
+</footer>
+
+
+<script>
+
+
+const translations = {
+
+
+    ru: {
+
+        home: "Главная",
+        story: "История",
+        days: "108 дней",
+
+        back: "← Вернуться на главную",
+
+        title: "С чего всё началось",
+
+        intro: "История началась с Любы, которая находилась в Турции и однажды увидела в Instagram практику 108 благодарностей.",
+
+        firstTitle: "Люба в Турции",
+
+        firstText: "Люба находилась в Турции, когда впервые увидела информацию о практике 108 благодарностей.",
+
+        instagramTitle: "Instagram и новая идея",
+
+        instagramText: "Информацию о практике Люба увидела в Instagram. Её заинтересовала идея каждый день писать благодарности, и она решила попробовать.",
+
+        quote: "108 благодарностей — каждый день замечать то, за что ты можешь быть благодарен.",
+
+        startTitle: "Первые благодарности",
+
+        startText: "Люба начала писать благодарности каждый день. Постепенно эта практика стала частью её жизни.",
+
+        tanyaTitle: "Люба рассказывает Тане",
+
+        tanyaText: "Позже Люба рассказала об этой практике своей сестре Тане. Таня тоже решила начать писать благодарности.",
+
+        endTitle: "Так началась история двух сестёр",
+
+        endText: "Сначала свой путь начала Люба. Затем к практике присоединилась Таня. Так простая ежедневная практика стала началом истории двух сестёр и их 108 дней благодарности.",
+
+        footer1: "108 дней благодарности",
+
+        footer2: "История Любы и Тани"
+
+    },
+
+
+    ua: {
+
+        home: "Головна",
+        story: "Історія",
+        days: "108 днів",
+
+        back: "← Повернутися на головну",
+
+        title: "З чого все почалося",
+
+        intro: "Історія почалася з Люби, яка перебувала в Туреччині та одного разу побачила в Instagram практику 108 подяк.",
+
+        firstTitle: "Люба в Туреччині",
+
+        firstText: "Люба перебувала в Туреччині, коли вперше побачила інформацію про практику 108 подяк.",
+
+        instagramTitle: "Instagram і нова ідея",
+
+        instagramText: "Інформацію про практику Люба побачила в Instagram. Її зацікавила ідея щодня писати подяки, і вона вирішила спробувати.",
+
+        quote: "108 подяк — щодня помічати те, за що ти можеш бути вдячним.",
+
+        startTitle: "Перші подяки",
+
+        startText: "Люба почала писати подяки щодня. Поступово ця практика стала частиною її життя.",
+
+        tanyaTitle: "Люба розповідає Тані",
+
+        tanyaText: "Пізніше Люба розповіла про цю практику своїй сестрі Тані. Таня також вирішила почати писати подяки.",
+
+        endTitle: "Так почалася історія двох сестер",
+
+        endText: "Спочатку свій шлях почала Люба. Потім до практики приєдналася Таня. Так проста щоденна практика стала початком історії двох сестер та їхніх 108 днів вдячності.",
+
+        footer1: "108 днів вдячності",
+
+        footer2: "Історія Люби і Тані"
+
+    },
+
+
+    en: {
+
+        home: "Home",
+        story: "Story",
+        days: "108 Days",
+
+        back: "← Back to home",
+
+        title: "How It All Started",
+
+        intro: "The story began with Lyuba, who was in Turkey when she came across the practice of 108 gratitudes on Instagram.",
+
+        firstTitle: "Lyuba in Turkey",
+
+        firstText: "Lyuba was in Turkey when she first discovered information about the practice of 108 gratitudes.",
+
+        instagramTitle: "Instagram and a new idea",
+
+        instagramText: "Lyuba discovered the practice on Instagram. She became interested in the idea of writing gratitude every day and decided to try it.",
+
+        quote: "108 gratitudes — noticing something every day that you can be grateful for.",
+
+        startTitle: "The first gratitudes",
+
+        startText: "Lyuba began writing gratitude entries every day. Gradually, the practice became a part of her life.",
+
+        tanyaTitle: "Lyuba tells Tanya",
+
+        tanyaText: "Later, Lyuba told her sister Tanya about the practice. Tanya also decided to start writing gratitude entries.",
+
+        endTitle: "And so the story of two sisters began",
+
+        endText: "Lyuba started her journey first. Then Tanya joined the practice. A simple daily practice became the beginning of the story of two sisters and their 108 days of gratitude.",
+
+        footer1: "108 Days of Gratitude",
+
+        footer2: "The Story of Lyuba and Tanya"
+
+    }
+
+};
+
+
+function setLanguage(language) {
+
+    const t = translations[language];
+
+
+    for (const key in t) {
+
+        const element = document.getElementById(key);
+
+        if (element) {
+
+            element.textContent = t[key];
+
+        }
+
+    }
+
+
+    document.documentElement.lang =
+        language === "ua" ? "uk" : language;
+
+
+    document.querySelectorAll(".languages button").forEach(button => {
+
+        button.classList.remove("active");
+
+    });
+
+
+    document.getElementById(language).classList.add("active");
+
+
+    localStorage.setItem("language", language);
+
+}
+
+
+const savedLanguage =
+    localStorage.getItem("language") || "ru";
+
+
+setLanguage(savedLanguage);
+
+
+</script>
+
+
+</body>
+
+</html>
+```
