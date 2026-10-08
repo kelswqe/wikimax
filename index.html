@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>108 дней благодарностей</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f3ed;
+            color: #29251f;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd6cc;
+            padding: 18px 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #765c3d;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5f5040;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #a67c52;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 70px auto 40px;
+            padding: 60px 30px;
+            text-align: center;
+            background: #fffdf9;
+            border: 1px solid #e1d8cc;
+            border-radius: 18px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
+            color: #60482f;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #62594f;
+        }
+
+        .subtitle {
+            margin-top: 25px !important;
+            font-size: 16px !important;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px 30px 70px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin: 35px 0;
+            color: #60482f;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: white;
+            border: 1px solid #ddd6cc;
+            border-radius: 14px;
+            padding: 25px;
+            min-height: 180px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(70, 50, 30, 0.12);
+            border-color: #c7ad91;
+        }
+
+        .card .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 21px;
+            color: #765536;
+        }
+
+        .card p {
+            margin: 0;
+            color: #71685e;
+            line-height: 1.5;
+        }
+
+        .quote {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 35px;
+            text-align: center;
+            background: #eee5d9;
+            border-radius: 15px;
+        }
+
+        .quote p {
+            font-size: 22px;
+            line-height: 1.6;
+            font-style: italic;
+            color: #60482f;
+        }
+
+        footer {
+            background: #3f3429;
+            color: #eee7df;
+            text-align: center;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 15px 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                margin: 30px 15px;
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .container {
+                padding: 10px 15px 50px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        108 дней благодарностей
+    </div>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="story.html">История</a>
+        <a href="days.html">108 дней</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>108 дней благодарностей</h1>
+
+    <p>
+        История о благодарности, переменах и новом взгляде
+        на жизнь.
+    </p>
+
+    <p class="subtitle">
+        Иногда большие изменения начинаются с нескольких
+        простых слов, записанных в обычной тетради.
+    </p>
+
+</section>
+
+
+<div class="container">
+
+    <h2 class="section-title">
+        О чём вы хотите узнать?
+    </h2>
+
+
+    <div class="cards">
+
+        <a class="card" href="about.html">
+
+            <div class="icon">📖</div>
+
+            <h2>Что такое 108 дней?</h2>
+
+            <p>
+                Узнайте, что означает практика 108 дней
+                благодарностей и зачем люди её начинают.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="story.html">
+
+            <div class="icon">👭</div>
+
+            <h2>История Тани и Любы</h2>
+
+            <p>
+                Как всё началось и почему две сестры
+                решили писать благодарности.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="turkey.html">
+
+            <div class="icon">🇹🇷</div>
+
+            <h2>Начало в Турции</h2>
+
+            <p>
+                Период, когда не было работы, денег
+                и привычной стабильности.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="why108.html">
+
+            <div class="icon">🔢</div>
+
+            <h2>Почему именно 108?</h2>
+
+            <p>
+                Почему для этого пути было выбрано
+                именно число 108.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="results.html">
+
+            <div class="icon">✨</div>
+
+            <h2>Что изменилось?</h2>
+
+            <p>
+                Какие изменения Таня и Люба заметили
+                за время этого пути.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="days.html">
+
+            <div class="icon">📅</div>
+
+            <h2>108 дней</h2>
+
+            <p>
+                Перейдите к дневнику и выберите
+                любой день от 1 до 108.
+            </p>
+
+        </a>
+
+    </div>
+
+
+    <div class="quote">
+
+        <p>
+            «Не всегда нужно менять всю свою жизнь.
+            Иногда достаточно начать замечать то хорошее,
+            что уже в ней есть.»
+        </p>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <b>108 дней благодарностей</b>
+
+    <br>
+
+    История, которая началась с одной благодарности.
+
+</footer>
+
+</body>
+</html>
