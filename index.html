@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>108 дней — как практика благодарности поменяла жизнь</title>
+    <title>108 дней</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,12 +32,40 @@
             padding: 25px 8%;
             border-bottom: 1px solid #ddd2c5;
             background: #f8f4ee;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
             font-weight: 600;
+        }
+
+        .languages {
+            display: flex;
+            gap: 8px;
+        }
+
+        .languages button {
+            border: 1px solid #cfc2b5;
+            background: transparent;
+            padding: 7px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            color: #3d342c;
+        }
+
+        .languages button:hover {
+            background: #e9dfd4;
+        }
+
+        .languages button.active {
+            background: #3d342c;
+            color: white;
         }
 
         main {
@@ -114,6 +142,14 @@
 
         @media (max-width: 700px) {
 
+            header {
+                padding: 20px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
             main {
                 padding: 50px 18px;
             }
@@ -136,18 +172,32 @@
 <body>
 
 <header>
-    <div class="logo">108 дней благодарности</div>
+
+    <div class="logo" id="logo">
+        108 дней благодарности
+    </div>
+
+    <div class="languages">
+        <button onclick="changeLanguage('ru')" id="ru">RU</button>
+        <button onclick="changeLanguage('ua')" id="ua">UA</button>
+        <button onclick="changeLanguage('en')" id="en">EN</button>
+    </div>
+
 </header>
 
 <main>
 
     <section class="hero">
 
-        <h1>108 дней</h1>
+        <h1 id="title">
+            108 дней
+        </h1>
 
-        <h2>Как практика благодарности поменяла жизнь</h2>
+        <h2 id="subtitle">
+            Как практика благодарности поменяла жизнь
+        </h2>
 
-        <p>
+        <p id="description">
             История двух сестёр, которые начали писать
             108 дней благодарности и увидели,
             как постепенно изменилась их жизнь.
@@ -158,46 +208,47 @@
     <section class="cards">
 
         <a href="about.html" class="card">
-            <h3>Что такое 108 дней?</h3>
-            <p>
+            <h3 id="card1-title">Что такое 108 дней?</h3>
+            <p id="card1-text">
                 Что представляет собой практика
                 и почему именно число 108.
             </p>
         </a>
 
         <a href="story.html" class="card">
-            <h3>История Любы и тани</h3>
-            <p>
+            <h3 id="card2-title">История Тани и Любы</h3>
+            <p id="card2-text">
                 Как всё началось и с чего начался
                 путь двух сестёр.
             </p>
         </a>
 
         <a href="turkey.html" class="card">
-            <h3>С чего всё началось</h3>
-            <p>
-                Жизненные сложности, начало пути и первые благодарности.
+            <h3 id="card3-title">С чего всё началось</h3>
+            <p id="card3-text">
+                Жизненные сложности, начало пути
+                и первые благодарности.
             </p>
         </a>
 
         <a href="why108.html" class="card">
-            <h3>Почему 108?</h3>
-            <p>
+            <h3 id="card4-title">Почему 108?</h3>
+            <p id="card4-text">
                 Значение особого духовного числа 108.
             </p>
         </a>
 
         <a href="results.html" class="card">
-            <h3>Что изменилось?</h3>
-            <p>
+            <h3 id="card5-title">Что изменилось?</h3>
+            <p id="card5-text">
                 Изменения, которые произошли
                 в жизни Тани и Любы.
             </p>
         </a>
 
         <a href="days.html" class="card">
-            <h3>108 дней</h3>
-            <p>
+            <h3 id="card6-title">108 дней</h3>
+            <p id="card6-text">
                 Путь благодарности день за днём.
             </p>
         </a>
@@ -206,10 +257,145 @@
 
 </main>
 
-<footer>
+<footer id="footer">
     История двух сестёр и 108 дней благодарности
 </footer>
+
+
+<script>
+
+const translations = {
+
+    ru: {
+        logo: "108 дней благодарности",
+        title: "108 дней",
+        subtitle: "Как практика благодарности поменяла жизнь",
+        description: "История двух сестёр, которые начали писать 108 дней благодарности и увидели, как постепенно изменилась их жизнь.",
+
+        card1Title: "Что такое 108 дней?",
+        card1Text: "Что представляет собой практика и почему именно число 108.",
+
+        card2Title: "История Тани и Любы",
+        card2Text: "Как всё началось и с чего начался путь двух сестёр.",
+
+        card3Title: "С чего всё началось",
+        card3Text: "Жизненные сложности, начало пути и первые благодарности.",
+
+        card4Title: "Почему 108?",
+        card4Text: "Значение особого духовного числа 108.",
+
+        card5Title: "Что изменилось?",
+        card5Text: "Изменения, которые произошли в жизни Тани и Любы.",
+
+        card6Title: "108 дней",
+        card6Text: "Путь благодарности день за днём.",
+
+        footer: "История двух сестёр и 108 дней благодарности"
+    },
+
+    ua: {
+        logo: "108 днів вдячності",
+        title: "108 днів",
+        subtitle: "Як практика вдячності змінила життя",
+        description: "Історія двох сестер, які почали писати 108 днів вдячності та побачили, як поступово змінилося їхнє життя.",
+
+        card1Title: "Що таке 108 днів?",
+        card1Text: "Що являє собою ця практика і чому саме число 108.",
+
+        card2Title: "Історія Тані та Люби",
+        card2Text: "Як усе почалося і з чого розпочався шлях двох сестер.",
+
+        card3Title: "З чого все почалося",
+        card3Text: "Життєві труднощі, початок шляху та перші подяки.",
+
+        card4Title: "Чому 108?",
+        card4Text: "Значення особливого духовного числа 108.",
+
+        card5Title: "Що змінилося?",
+        card5Text: "Зміни, які відбулися в житті Тані та Люби.",
+
+        card6Title: "108 днів",
+        card6Text: "Шлях вдячності день за днем.",
+
+        footer: "Історія двох сестер та 108 днів вдячності"
+    },
+
+    en: {
+        logo: "108 Days of Gratitude",
+        title: "108 Days",
+        subtitle: "How the practice of gratitude changed their lives",
+        description: "The story of two sisters who began writing gratitude for 108 days and saw how their lives gradually changed.",
+
+        card1Title: "What are the 108 days?",
+        card1Text: "What the practice is and why the number 108 is special.",
+
+        card2Title: "The story of Tanya and Lyuba",
+        card2Text: "How everything began and how the sisters started their journey.",
+
+        card3Title: "How it all began",
+        card3Text: "Life challenges, the beginning of the journey and the first gratitude notes.",
+
+        card4Title: "Why 108?",
+        card4Text: "The meaning of the special spiritual number 108.",
+
+        card5Title: "What changed?",
+        card5Text: "The changes that happened in Tanya and Lyuba's lives.",
+
+        card6Title: "108 Days",
+        card6Text: "The journey of gratitude, day by day.",
+
+        footer: "The story of two sisters and 108 days of gratitude"
+    }
+
+};
+
+
+function changeLanguage(language) {
+
+    const t = translations[language];
+
+    document.getElementById("logo").textContent = t.logo;
+
+    document.getElementById("title").textContent = t.title;
+
+    document.getElementById("subtitle").textContent = t.subtitle;
+
+    document.getElementById("description").textContent = t.description;
+
+    document.getElementById("card1-title").textContent = t.card1Title;
+    document.getElementById("card1-text").textContent = t.card1Text;
+
+    document.getElementById("card2-title").textContent = t.card2Title;
+    document.getElementById("card2-text").textContent = t.card2Text;
+
+    document.getElementById("card3-title").textContent = t.card3Title;
+    document.getElementById("card3-text").textContent = t.card3Text;
+
+    document.getElementById("card4-title").textContent = t.card4Title;
+    document.getElementById("card4-text").textContent = t.card4Text;
+
+    document.getElementById("card5-title").textContent = t.card5Title;
+    document.getElementById("card5-text").textContent = t.card5Text;
+
+    document.getElementById("card6-title").textContent = t.card6Title;
+    document.getElementById("card6-text").textContent = t.card6Text;
+
+    document.getElementById("footer").textContent = t.footer;
+
+    document.getElementById("ru").classList.remove("active");
+    document.getElementById("ua").classList.remove("active");
+    document.getElementById("en").classList.remove("active");
+
+    document.getElementById(language).classList.add("active");
+
+    document.documentElement.lang = language;
+}
+
+changeLanguage("ru");
+
+</script>
 
 </body>
 </html>
 ```
+
