@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>История Любы и Тани — 108 дней</title>
+    <title>108 дней — История Любы и Тани</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
@@ -39,15 +40,41 @@
             color: #60482f;
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
         nav a {
             color: #5f5040;
             text-decoration: none;
-            margin-left: 25px;
             font-weight: 600;
         }
 
         nav a:hover {
             color: #a67c52;
+        }
+
+        .languages {
+            display: flex;
+            gap: 6px;
+            margin-left: 15px;
+        }
+
+        .languages button {
+            border: 1px solid #d5c8b9;
+            background: white;
+            color: #60482f;
+            padding: 7px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .languages button.active {
+            background: #60482f;
+            color: white;
         }
 
         main {
@@ -116,15 +143,13 @@
             font-weight: 600;
         }
 
-        .section-luba {
+        .section {
             border-top: 2px solid #d9c9b7;
             padding-top: 20px;
         }
 
-        .section-tanya {
+        .tanya {
             margin-top: 80px;
-            border-top: 2px solid #d9c9b7;
-            padding-top: 20px;
         }
 
         footer {
@@ -138,6 +163,8 @@
 
             header {
                 padding: 18px 20px;
+                flex-wrap: wrap;
+                gap: 15px;
             }
 
             .logo {
@@ -145,7 +172,21 @@
             }
 
             nav {
-                display: none;
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .languages {
+                margin-left: 0;
+            }
+
+            .languages button {
+                padding: 6px 8px;
             }
 
             main {
@@ -187,29 +228,44 @@
 
 <header>
 
-    <div class="logo">
+    <div class="logo" id="logo">
         108 дней благодарности
     </div>
 
     <nav>
-        <a href="index.html">Главная</a>
-        <a href="story.html">История</a>
-        <a href="days.html">108 дней</a>
+
+        <a href="index.html" id="home">Главная</a>
+
+        <a href="story.html" id="storyLink">История</a>
+
+        <a href="days.html" id="daysLink">108 дней</a>
+
+        <div class="languages">
+            <button onclick="setLanguage('ru')" id="ru">RU</button>
+            <button onclick="setLanguage('ua')" id="ua">UA</button>
+            <button onclick="setLanguage('en')" id="en">EN</button>
+        </div>
+
     </nav>
 
 </header>
 
+
 <main>
 
-    <a class="back" href="index.html">
+    <a class="back" href="index.html" id="back">
         ← Вернуться на главную
     </a>
 
+
     <article class="article">
 
-        <h1>История Любы и Тани</h1>
+        <h1 id="title">
+            История Любы и Тани
+        </h1>
 
-        <div class="intro">
+
+        <div class="intro" id="intro">
             Всё началось с Любы.
             Именно она первой узнала о практике
             108 благодарностей и начала свой путь.
@@ -218,83 +274,91 @@
 
         <!-- ЛЮБА -->
 
-        <section class="section-luba">
+        <section class="section">
 
-            <h2>Люба — начало истории</h2>
+            <h2 id="lubaTitle">
+                Люба — начало истории
+            </h2>
 
-            <p>
+            <p id="luba1">
                 Люба находилась в Турции, когда
                 увидела в Instagram информацию
                 о практике «108 благодарностей».
             </p>
 
-            <p>
+            <p id="luba2">
                 Её заинтересовала эта практика,
                 и Люба решила попробовать.
                 Она начала каждый день писать
                 благодарности.
             </p>
 
-            <p>
+            <p id="luba3">
                 Постепенно это стало для неё
-                не просто разовым экспериментом,
-                а частью её жизни.
+                частью жизни.
             </p>
 
 
-            <h2>Почему именно 108?</h2>
+            <h2 id="numberTitle">
+                Почему именно 108?
+            </h2>
 
-            <p>
+            <p id="number1">
                 Для Любы число 108 стало
                 особенным духовным числом.
             </p>
 
-            <p>
+            <p id="number2">
                 Поэтому она начала писать
                 именно 108 благодарностей,
                 продолжая эту практику день за днём.
             </p>
 
 
-            <h2>Как менялась жизнь Любы</h2>
+            <h2 id="changeTitle">
+                Как менялась жизнь Любы
+            </h2>
 
-            <p>
+            <p id="change1">
                 Люба продолжала практиковать
                 благодарность и постепенно стала
                 замечать изменения в своей жизни.
             </p>
 
-            <p>
+            <p id="change2">
                 В её жизни появились квартира,
                 деньги, клиенты и автомобиль.
             </p>
 
-            <p>
+            <p id="change3">
                 Она стала много путешествовать
                 и летать по всему миру.
             </p>
 
-            <p>
+            <p id="change4">
                 В её жизни появился мужчина,
                 который много для неё делал
                 и давал ей всё необходимое.
             </p>
 
-            <div class="quote">
+
+            <div class="quote" id="quote">
                 Люба почувствовала, что практика
                 благодарности действительно
                 изменила её жизнь.
             </div>
 
 
-            <h2>Люба продолжает свой путь</h2>
+            <h2 id="pathTitle">
+                Люба продолжает свой путь
+            </h2>
 
-            <p>
+            <p id="path1">
                 Для Любы эта практика стала
                 важной частью её жизни.
             </p>
 
-            <p>
+            <p id="path2">
                 Она продолжала двигаться дальше,
                 замечать изменения и развивать
                 свою жизнь.
@@ -305,85 +369,93 @@
 
         <!-- ТАНЯ -->
 
-        <section class="section-tanya">
+        <section class="section tanya">
 
-            <h2>Люба рассказала Тане</h2>
+            <h2 id="tanyaStart">
+                Люба рассказала Тане
+            </h2>
 
-            <p>
+            <p id="tanya1">
                 После того как Люба начала
                 заниматься практикой, она
                 рассказала о ней своей сестре Тане.
             </p>
 
-            <p>
+            <p id="tanya2">
                 Таня тоже решила начать писать
                 благодарности.
             </p>
 
-            <p>
+            <p id="tanya3">
                 При этом Таня с самого начала
                 верила в эту практику.
             </p>
 
 
-            <h2>Путь Тани</h2>
+            <h2 id="tanyaPath">
+                Путь Тани
+            </h2>
 
-            <p>
+            <p id="tanya4">
                 В то время Таня работала
                 на работе, которая ей не нравилась.
             </p>
 
-            <p>
+            <p id="tanya5">
                 Сначала она просто начала
                 писать благодарности за всё,
                 что было хорошего в её жизни.
             </p>
 
-            <p>
+            <p id="tanya6">
                 Постепенно Таня стала более
                 позитивной, начала замечать
                 больше возможностей и стала
                 действовать.
             </p>
 
-            <p>
+            <p id="tanya7">
                 Со временем появились деньги
                 и новые возможности.
             </p>
 
 
-            <h2>Таня меняет свою жизнь</h2>
+            <h2 id="tanyaChange">
+                Таня меняет свою жизнь
+            </h2>
 
-            <p>
+            <p id="tanya8">
                 В итоге Таня ушла с работы,
                 которая ей не нравилась.
             </p>
 
-            <p>
+            <p id="tanya9">
                 После этого она почувствовала
                 облегчение и начала заниматься
                 тем, что ей действительно нравилось.
             </p>
 
-            <p>
+            <p id="tanya10">
                 Таня начала вести блог,
                 показывать, как красиво она шьёт,
                 и пробовать разные образы.
             </p>
 
-            <p>
+            <p id="tanya11">
                 Её блог начал набирать подписчиков,
                 а вместе с этим появились и деньги.
             </p>
 
 
-            <h2>Переезд в Германию</h2>
+            <h2 id="germany">
+                Переезд в Германию
+            </h2>
 
-            <p>
+            <p id="germanyText">
                 Позже Таня переехала в Германию.
             </p>
 
-            <p>
+            <p id="germanyText2">
                 После переезда она продолжила
                 заниматься тем, что ей нравилось,
                 и продолжила свой путь.
@@ -392,23 +464,25 @@
         </section>
 
 
-        <h2>Две сестры — одна история</h2>
+        <h2 id="finalTitle">
+            Две сестры — одна история
+        </h2>
 
-        <p>
+        <p id="final1">
             Сначала свой путь начала Люба.
             Именно она первой узнала о практике
             108 благодарностей и рассказала
             о ней Тане.
         </p>
 
-        <p>
+        <p id="final2">
             Затем свой путь начала Таня.
             У каждой из сестёр происходили
             свои изменения, но начало было
             одним и тем же — с благодарности.
         </p>
 
-        <p>
+        <p id="final3">
             Так история Любы стала началом
             истории двух сестёр и их 108 дней
             благодарности.
@@ -418,13 +492,328 @@
 
 </main>
 
+
 <footer>
 
-    108 дней благодарности
+    <span id="footer1">108 дней благодарности</span>
+
     <br>
-    История Любы и Тани
+
+    <span id="footer2">История Любы и Тани</span>
 
 </footer>
+
+
+<script>
+
+const translations = {
+
+    ru: {
+
+        logo: "108 дней благодарности",
+        home: "Главная",
+        storyLink: "История",
+        daysLink: "108 дней",
+        back: "← Вернуться на главную",
+
+        title: "История Любы и Тани",
+
+        intro: "Всё началось с Любы. Именно она первой узнала о практике 108 благодарностей и начала свой путь.",
+
+        lubaTitle: "Люба — начало истории",
+
+        luba1: "Люба находилась в Турции, когда увидела в Instagram информацию о практике «108 благодарностей».",
+
+        luba2: "Её заинтересовала эта практика, и Люба решила попробовать. Она начала каждый день писать благодарности.",
+
+        luba3: "Постепенно это стало для неё частью жизни.",
+
+        numberTitle: "Почему именно 108?",
+
+        number1: "Для Любы число 108 стало особенным духовным числом.",
+
+        number2: "Поэтому она начала писать именно 108 благодарностей, продолжая эту практику день за днём.",
+
+        changeTitle: "Как менялась жизнь Любы",
+
+        change1: "Люба продолжала практиковать благодарность и постепенно стала замечать изменения в своей жизни.",
+
+        change2: "В её жизни появились квартира, деньги, клиенты и автомобиль.",
+
+        change3: "Она стала много путешествовать и летать по всему миру.",
+
+        change4: "В её жизни появился мужчина, который много для неё делал и давал ей всё необходимое.",
+
+        quote: "Люба почувствовала, что практика благодарности действительно изменила её жизнь.",
+
+        pathTitle: "Люба продолжает свой путь",
+
+        path1: "Для Любы эта практика стала важной частью её жизни.",
+
+        path2: "Она продолжала двигаться дальше, замечать изменения и развивать свою жизнь.",
+
+        tanyaStart: "Люба рассказала Тане",
+
+        tanya1: "После того как Люба начала заниматься практикой, она рассказала о ней своей сестре Тане.",
+
+        tanya2: "Таня тоже решила начать писать благодарности.",
+
+        tanya3: "При этом Таня с самого начала верила в эту практику.",
+
+        tanyaPath: "Путь Тани",
+
+        tanya4: "В то время Таня работала на работе, которая ей не нравилась.",
+
+        tanya5: "Сначала она просто начала писать благодарности за всё, что было хорошего в её жизни.",
+
+        tanya6: "Постепенно Таня стала более позитивной, начала замечать больше возможностей и стала действовать.",
+
+        tanya7: "Со временем появились деньги и новые возможности.",
+
+        tanyaChange: "Таня меняет свою жизнь",
+
+        tanya8: "В итоге Таня ушла с работы, которая ей не нравилась.",
+
+        tanya9: "После этого она почувствовала облегчение и начала заниматься тем, что ей действительно нравилось.",
+
+        tanya10: "Таня начала вести блог, показывать, как красиво она шьёт, и пробовать разные образы.",
+
+        tanya11: "Её блог начал набирать подписчиков, а вместе с этим появились и деньги.",
+
+        germany: "Переезд в Германию",
+
+        germanyText: "Позже Таня переехала в Германию.",
+
+        germanyText2: "После переезда она продолжила заниматься тем, что ей нравилось, и продолжила свой путь.",
+
+        finalTitle: "Две сестры — одна история",
+
+        final1: "Сначала свой путь начала Люба. Именно она первой узнала о практике 108 благодарностей и рассказала о ней Тане.",
+
+        final2: "Затем свой путь начала Таня. У каждой из сестёр происходили свои изменения, но начало было одним и тем же — с благодарности.",
+
+        final3: "Так история Любы стала началом истории двух сестёр и их 108 дней благодарности.",
+
+        footer1: "108 дней благодарности",
+        footer2: "История Любы и Тани"
+    },
+
+
+    ua: {
+
+        logo: "108 днів вдячності",
+        home: "Головна",
+        storyLink: "Історія",
+        daysLink: "108 днів",
+        back: "← Повернутися на головну",
+
+        title: "Історія Люби і Тані",
+
+        intro: "Все почалося з Люби. Саме вона першою дізналася про практику 108 подяк і почала свій шлях.",
+
+        lubaTitle: "Люба — початок історії",
+
+        luba1: "Люба перебувала в Туреччині, коли побачила в Instagram інформацію про практику «108 подяк».",
+
+        luba2: "Її зацікавила ця практика, і Люба вирішила спробувати. Вона почала щодня писати подяки.",
+
+        luba3: "Поступово це стало для неї частиною життя.",
+
+        numberTitle: "Чому саме 108?",
+
+        number1: "Для Люби число 108 стало особливим духовним числом.",
+
+        number2: "Тому вона почала писати саме 108 подяк, продовжуючи цю практику день за днем.",
+
+        changeTitle: "Як змінювалося життя Люби",
+
+        change1: "Люба продовжувала практикувати вдячність і поступово почала помічати зміни у своєму житті.",
+
+        change2: "У її житті з'явилися квартира, гроші, клієнти та автомобіль.",
+
+        change3: "Вона почала багато подорожувати та літати по всьому світу.",
+
+        change4: "У її житті з'явився чоловік, який багато для неї робив і давав їй усе необхідне.",
+
+        quote: "Люба відчула, що практика вдячності справді змінила її життя.",
+
+        pathTitle: "Люба продовжує свій шлях",
+
+        path1: "Для Люби ця практика стала важливою частиною її життя.",
+
+        path2: "Вона продовжувала рухатися вперед, помічати зміни та розвивати своє життя.",
+
+        tanyaStart: "Люба розповіла Тані",
+
+        tanya1: "Після того як Люба почала займатися практикою, вона розповіла про неї своїй сестрі Тані.",
+
+        tanya2: "Таня також вирішила почати писати подяки.",
+
+        tanya3: "При цьому Таня від самого початку вірила в цю практику.",
+
+        tanyaPath: "Шлях Тані",
+
+        tanya4: "У той час Таня працювала на роботі, яка їй не подобалася.",
+
+        tanya5: "Спочатку вона просто почала писати подяки за все хороше, що було в її житті.",
+
+        tanya6: "Поступово Таня стала більш позитивною, почала помічати більше можливостей і почала діяти.",
+
+        tanya7: "Згодом з'явилися гроші та нові можливості.",
+
+        tanyaChange: "Таня змінює своє життя",
+
+        tanya8: "У результаті Таня звільнилася з роботи, яка їй не подобалася.",
+
+        tanya9: "Після цього вона відчула полегшення і почала займатися тим, що їй справді подобалося.",
+
+        tanya10: "Таня почала вести блог, показувати, як красиво вона шиє, та пробувати різні образи.",
+
+        tanya11: "Її блог почав набирати підписників, а разом із цим з'явилися і гроші.",
+
+        germany: "Переїзд до Німеччини",
+
+        germanyText: "Пізніше Таня переїхала до Німеччини.",
+
+        germanyText2: "Після переїзду вона продовжила займатися тим, що їй подобалося, і продовжила свій шлях.",
+
+        finalTitle: "Дві сестри — одна історія",
+
+        final1: "Спочатку свій шлях почала Люба. Саме вона першою дізналася про практику 108 подяк і розповіла про неї Тані.",
+
+        final2: "Потім свій шлях почала Таня. У кожної із сестер відбувалися свої зміни, але початок був одним і тим самим — із вдячності.",
+
+        final3: "Так історія Люби стала початком історії двох сестер та їхніх 108 днів вдячності.",
+
+        footer1: "108 днів вдячності",
+        footer2: "Історія Люби і Тані"
+    },
+
+
+    en: {
+
+        logo: "108 Days of Gratitude",
+        home: "Home",
+        storyLink: "Story",
+        daysLink: "108 Days",
+        back: "← Back to home",
+
+        title: "The Story of Lyuba and Tanya",
+
+        intro: "It all started with Lyuba. She was the first to discover the practice of 108 gratitude entries and begin her journey.",
+
+        lubaTitle: "Lyuba — the beginning",
+
+        luba1: "Lyuba was in Turkey when she saw information about the practice of “108 Gratitudes” on Instagram.",
+
+        luba2: "She became interested in the practice and decided to try it. She began writing gratitude entries every day.",
+
+        luba3: "Gradually, it became a part of her life.",
+
+        numberTitle: "Why 108?",
+
+        number1: "For Lyuba, the number 108 became a special spiritual number.",
+
+        number2: "That is why she began writing exactly 108 gratitude entries, continuing the practice day after day.",
+
+        changeTitle: "How Lyuba's life changed",
+
+        change1: "Lyuba continued practicing gratitude and gradually began noticing changes in her life.",
+
+        change2: "She had an apartment, money, clients and a car.",
+
+        change3: "She began traveling a lot and flying around the world.",
+
+        change4: "A man appeared in her life who did a lot for her and provided her with everything she needed.",
+
+        quote: "Lyuba felt that the practice of gratitude had truly changed her life.",
+
+        pathTitle: "Lyuba continues her journey",
+
+        path1: "For Lyuba, the practice became an important part of her life.",
+
+        path2: "She continued moving forward, noticing changes and developing her life.",
+
+        tanyaStart: "Lyuba told Tanya",
+
+        tanya1: "After Lyuba started practicing, she told her sister Tanya about it.",
+
+        tanya2: "Tanya also decided to start writing gratitude entries.",
+
+        tanya3: "From the very beginning, Tanya believed in the practice.",
+
+        tanyaPath: "Tanya's journey",
+
+        tanya4: "At that time, Tanya was working at a job she did not like.",
+
+        tanya5: "At first, she simply began writing gratitude entries for everything good in her life.",
+
+        tanya6: "Gradually, Tanya became more positive, began noticing more opportunities and started taking action.",
+
+        tanya7: "Over time, money and new opportunities appeared.",
+
+        tanyaChange: "Tanya changes her life",
+
+        tanya8: "Eventually, Tanya left the job she did not like.",
+
+        tanya9: "After that, she felt relieved and began doing what she truly enjoyed.",
+
+        tanya10: "Tanya started a blog, showed how beautifully she sews and tried different looks.",
+
+        tanya11: "Her blog began gaining followers, and money started coming from it as well.",
+
+        germany: "Moving to Germany",
+
+        germanyText: "Later, Tanya moved to Germany.",
+
+        germanyText2: "After moving, she continued doing what she enjoyed and continued on her path.",
+
+        finalTitle: "Two sisters — one story",
+
+        final1: "Lyuba started her journey first. She was the first to discover the practice of 108 gratitudes and told Tanya about it.",
+
+        final2: "Then Tanya began her own journey. Each sister experienced her own changes, but the beginning was the same — gratitude.",
+
+        final3: "And so Lyuba's story became the beginning of the story of two sisters and their 108 days of gratitude.",
+
+        footer1: "108 Days of Gratitude",
+        footer2: "The Story of Lyuba and Tanya"
+    }
+
+};
+
+
+function setLanguage(language) {
+
+    const t = translations[language];
+
+    for (const key in t) {
+
+        const element = document.getElementById(key);
+
+        if (element) {
+            element.textContent = t[key];
+        }
+
+    }
+
+    document.documentElement.lang = language === "ua" ? "uk" : language;
+
+    document.querySelectorAll(".languages button").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.getElementById(language).classList.add("active");
+
+    localStorage.setItem("language", language);
+}
+
+
+const savedLanguage = localStorage.getItem("language") || "ru";
+
+setLanguage(savedLanguage);
+
+</script>
 
 </body>
 </html>
