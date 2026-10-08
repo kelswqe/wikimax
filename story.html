@@ -1,10 +1,15 @@
-весь код <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>История Тани и Любы</title>
+    <title>История Любы и Тани — 108 дней</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -13,7 +18,7 @@
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: "DM Sans", sans-serif;
             background: #f7f3ed;
             color: #29251f;
         }
@@ -21,22 +26,24 @@
         header {
             background: white;
             border-bottom: 1px solid #ddd6cc;
-            padding: 18px 35px;
+            padding: 22px 45px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 23px;
-            font-weight: bold;
-            color: #765c3d;
+            font-family: "Manrope", sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: #60482f;
         }
 
         nav a {
             color: #5f5040;
             text-decoration: none;
             margin-left: 25px;
+            font-weight: 600;
         }
 
         nav a:hover {
@@ -44,52 +51,9 @@
         }
 
         main {
-            max-width: 850px;
-            margin: 50px auto;
-            padding: 0 25px 60px;
-        }
-
-        .article {
-            background: white;
-            padding: 45px;
-            border: 1px solid #ddd6cc;
-            border-radius: 15px;
-        }
-
-        h1 {
-            font-size: 40px;
-            color: #60482f;
-            margin-top: 0;
-            border-bottom: 1px solid #d9d0c5;
-            padding-bottom: 15px;
-        }
-
-        h2 {
-            color: #765536;
-            margin-top: 40px;
-        }
-
-        p {
-            font-size: 17px;
-            line-height: 1.8;
-            color: #4e4943;
-        }
-
-        .intro {
-            font-size: 19px;
-            background: #f1e9df;
-            padding: 20px;
-            border-left: 4px solid #a67c52;
-            margin: 25px 0;
-        }
-
-        .quote {
-            background: #eee5d9;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 10px;
-            font-style: italic;
-            color: #60482f;
+            max-width: 950px;
+            margin: 60px auto;
+            padding: 0 20px 80px;
         }
 
         .back {
@@ -97,23 +61,87 @@
             margin-bottom: 25px;
             color: #765536;
             text-decoration: none;
+            font-weight: 600;
         }
 
-        .back:hover {
-            text-decoration: underline;
+        .article {
+            background: white;
+            border: 1px solid #ddd6cc;
+            border-radius: 22px;
+            padding: 60px;
+        }
+
+        h1 {
+            font-family: "Manrope", sans-serif;
+            font-size: 64px;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            color: #4e3b29;
+            margin: 0 0 25px;
+        }
+
+        .intro {
+            background: #f1e9df;
+            border-left: 5px solid #a67c52;
+            border-radius: 0 15px 15px 0;
+            padding: 28px;
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: 36px;
+            color: #60482f;
+            margin-top: 65px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #4e4943;
+            margin: 18px 0;
+        }
+
+        .quote {
+            background: #eee5d9;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 35px 0;
+            font-size: 22px;
+            line-height: 1.5;
+            color: #60482f;
+            font-weight: 600;
+        }
+
+        .section-luba {
+            border-top: 2px solid #d9c9b7;
+            padding-top: 20px;
+        }
+
+        .section-tanya {
+            margin-top: 80px;
+            border-top: 2px solid #d9c9b7;
+            padding-top: 20px;
         }
 
         footer {
             background: #3f3429;
             color: #eee7df;
             text-align: center;
-            padding: 30px;
+            padding: 35px 20px;
         }
 
         @media (max-width: 700px) {
 
             header {
-                padding: 15px 20px;
+                padding: 18px 20px;
+            }
+
+            .logo {
+                font-size: 18px;
             }
 
             nav {
@@ -122,19 +150,34 @@
 
             main {
                 margin: 25px auto;
-                padding: 0 15px 40px;
+                padding: 0 15px 45px;
             }
 
             .article {
-                padding: 25px 20px;
+                padding: 30px 22px;
+                border-radius: 16px;
             }
 
             h1 {
-                font-size: 31px;
+                font-size: 42px;
+                letter-spacing: -1px;
+            }
+
+            h2 {
+                font-size: 28px;
             }
 
             p {
-                font-size: 16px;
+                font-size: 17px;
+                line-height: 1.7;
+            }
+
+            .intro {
+                font-size: 19px;
+            }
+
+            .quote {
+                font-size: 19px;
             }
         }
     </style>
@@ -145,7 +188,7 @@
 <header>
 
     <div class="logo">
-        108 дней благодарностей
+        108 дней благодарности
     </div>
 
     <nav>
@@ -156,1273 +199,233 @@
 
 </header>
 
-
 <main>
 
     <a class="back" href="index.html">
         ← Вернуться на главную
     </a>
 
-
     <article class="article">
 
-        <h1>История Тани и Любы</h1>
-
+        <h1>История Любы и Тани</h1>
 
         <div class="intro">
-
-            Эта история началась не тогда, когда
-            всё было хорошо.
-
-            Она началась в период, когда жизнь
-            была совсем нестабильной.
-
+            Всё началось с Любы.
+            Именно она первой узнала о практике
+            108 благодарностей и начала свой путь.
         </div>
 
 
-        <h2>Начало</h2>
+        <!-- ЛЮБА -->
+
+        <section class="section-luba">
+
+            <h2>Люба — начало истории</h2>
+
+            <p>
+                Люба находилась в Турции, когда
+                увидела в Instagram информацию
+                о практике «108 благодарностей».
+            </p>
+
+            <p>
+                Её заинтересовала эта практика,
+                и Люба решила попробовать.
+                Она начала каждый день писать
+                благодарности.
+            </p>
+
+            <p>
+                Постепенно это стало для неё
+                не просто разовым экспериментом,
+                а частью её жизни.
+            </p>
+
+
+            <h2>Почему именно 108?</h2>
+
+            <p>
+                Для Любы число 108 стало
+                особенным духовным числом.
+            </p>
+
+            <p>
+                Поэтому она начала писать
+                именно 108 благодарностей,
+                продолжая эту практику день за днём.
+            </p>
+
+
+            <h2>Как менялась жизнь Любы</h2>
+
+            <p>
+                Люба продолжала практиковать
+                благодарность и постепенно стала
+                замечать изменения в своей жизни.
+            </p>
+
+            <p>
+                В её жизни появились квартира,
+                деньги, клиенты и автомобиль.
+            </p>
+
+            <p>
+                Она стала много путешествовать
+                и летать по всему миру.
+            </p>
+
+            <p>
+                В её жизни появился мужчина,
+                который много для неё делал
+                и давал ей всё необходимое.
+            </p>
+
+            <div class="quote">
+                Люба почувствовала, что практика
+                благодарности действительно
+                изменила её жизнь.
+            </div>
+
+
+            <h2>Люба продолжает свой путь</h2>
+
+            <p>
+                Для Любы эта практика стала
+                важной частью её жизни.
+            </p>
+
+            <p>
+                Она продолжала двигаться дальше,
+                замечать изменения и развивать
+                свою жизнь.
+            </p>
+
+        </section>
+
+
+        <!-- ТАНЯ -->
+
+        <section class="section-tanya">
+
+            <h2>Люба рассказала Тане</h2>
+
+            <p>
+                После того как Люба начала
+                заниматься практикой, она
+                рассказала о ней своей сестре Тане.
+            </p>
+
+            <p>
+                Таня тоже решила начать писать
+                благодарности.
+            </p>
+
+            <p>
+                При этом Таня с самого начала
+                верила в эту практику.
+            </p>
+
+
+            <h2>Путь Тани</h2>
+
+            <p>
+                В то время Таня работала
+                на работе, которая ей не нравилась.
+            </p>
+
+            <p>
+                Сначала она просто начала
+                писать благодарности за всё,
+                что было хорошего в её жизни.
+            </p>
+
+            <p>
+                Постепенно Таня стала более
+                позитивной, начала замечать
+                больше возможностей и стала
+                действовать.
+            </p>
+
+            <p>
+                Со временем появились деньги
+                и новые возможности.
+            </p>
+
+
+            <h2>Таня меняет свою жизнь</h2>
+
+            <p>
+                В итоге Таня ушла с работы,
+                которая ей не нравилась.
+            </p>
+
+            <p>
+                После этого она почувствовала
+                облегчение и начала заниматься
+                тем, что ей действительно нравилось.
+            </p>
+
+            <p>
+                Таня начала вести блог,
+                показывать, как красиво она шьёт,
+                и пробовать разные образы.
+            </p>
+
+            <p>
+                Её блог начал набирать подписчиков,
+                а вместе с этим появились и деньги.
+            </p>
+
+
+            <h2>Переезд в Германию</h2>
+
+            <p>
+                Позже Таня переехала в Германию.
+            </p>
+
+            <p>
+                После переезда она продолжила
+                заниматься тем, что ей нравилось,
+                и продолжила свой путь.
+            </p>
+
+        </section>
+
+
+        <h2>Две сестры — одна история</h2>
 
         <p>
-            Таня переехала в Турцию в период,
-            когда в её жизни практически не было
-            привычной стабильности.
+            Сначала свой путь начала Люба.
+            Именно она первой узнала о практике
+            108 благодарностей и рассказала
+            о ней Тане.
         </p>
 
         <p>
-            Не было работы, не было денег,
-            а впереди было много неизвестности.
-            Нужно было привыкать к новой стране
-            и одновременно думать о том,
-            что делать дальше.
+            Затем свой путь начала Таня.
+            У каждой из сестёр происходили
+            свои изменения, но начало было
+            одним и тем же — с благодарности.
         </p>
 
         <p>
-            Это был период, когда легко было
-            сосредоточиться только на проблемах.
-            Казалось, что сначала нужно решить
-            всё сложное, а уже потом думать
-            о хорошем.
-        </p>
-
-
-        <h2>Откуда появилась идея</h2>
-
-        <p>
-            Однажды Таня услышала в Instagram
-            о практике благодарности.
-        </p>
-
-        <p>
-            Суть была очень простой:
-            каждый день записывать несколько вещей,
-            за которые ты благодарен.
-        </p>
-
-        <p>
-            На первый взгляд это казалось
-            слишком простым.
-        </p>
-
-        <p>
-            Но Таня решила попробовать.
-        </p>
-
-
-        <div class="quote">
-
-            «За что я могу быть благодарна,
-            если сейчас у меня почти ничего нет?»
-
-        </div>
-
-
-        <p>
-            Именно этот вопрос стал одним из первых,
-            который заставил её посмотреть
-            на ситуацию немного по-другому.
-        </p>
-
-        <p>
-            Она начала искать благодарность
-            не только в больших событиях,
-            но и в самых обычных вещах.
-        </p>
-
-
-        <h2>Первые благодарности</h2>
-
-        <p>
-            Иногда благодарить было легко.
-            А иногда приходилось действительно
-            задумываться.
-        </p>
-
-        <p>
-            Благодарностью могла стать возможность
-            проснуться утром, хорошая погода,
-            вкусная еда, разговор с близким человеком
-            или просто возможность находиться
-            в новом месте.
-        </p>
-
-        <p>
-            Постепенно Таня заметила,
-            что начинает смотреть на свой день
-            немного иначе.
-        </p>
-
-
-        <h2>Люба присоединяется</h2>
-
-        <p>
-            Со временем к этой истории
-            присоединилась её сестра Люба.
-        </p>
-
-        <p>
-            Вместе они продолжили этот путь,
-            каждый день возвращаясь к одной
-            простой привычке — замечать хорошее
-            и записывать его.
-        </p>
-
-        <p>
-            Для них это стало не соревнованием
-            и не способом сделать вид,
-            что проблем не существует.
-        </p>
-
-        <p>
-            Это стало возможностью остановиться
-            хотя бы на несколько минут и посмотреть
-            на свою жизнь с другой стороны.
-        </p>
-
-
-        <h2>Постепенные изменения</h2>
-
-        <p>
-            Жизнь не изменилась мгновенно.
-        </p>
-
-        <p>
-            Благодарности не принесли работу
-            за одну ночь и не решили финансовые
-            проблемы сами по себе.
-        </p>
-
-        <p>
-            Но постепенно начали меняться
-            сами Таня и Люба.
-        </p>
-
-        <p>
-            Они стали чаще замечать свои маленькие
-            успехи, ставить цели и обращать внимание
-            на возможности, которые раньше могли
-            пройти мимо.
-        </p>
-
-        <p>
-            Маленькие изменения начали складываться
-            в более большие.
-        </p>
-
-
-        <h2>Почему эта история важна</h2>
-
-        <p>
-            История Тани и Любы не о том,
-            что достаточно написать несколько
-            благодарностей — и жизнь сразу станет
-            идеальной.
-        </p>
-
-        <p>
-            Она о другом.
-        </p>
-
-        <p>
-            Иногда изменить всё сразу невозможно.
-            Но можно изменить то, на что ты
-            обращаешь внимание каждый день.
-        </p>
-
-        <p>
-            А уже из маленьких ежедневных изменений
-            постепенно могут появиться большие.
+            Так история Любы стала началом
+            истории двух сестёр и их 108 дней
+            благодарности.
         </p>
 
     </article>
 
 </main>
 
-
 <footer>
 
-    108 дней благодарностей
-
+    108 дней благодарности
     <br>
-
-    История Тани и Любы
+    История Любы и Тани
 
 </footer>
 
 </body>
 </html>
-
-Ааа, понял 😭 Ты хочешь не Playfair, а тот вариант, где шрифт был более крупный, жирный и современный, чтобы страница выглядела как нормальный современный сайт.
-
-Давай сделаем крупный современный шрифт — без этого «классического» вида.
-
-Поставь вот это в начале <head> вместо старой ссылки на шрифты:
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-А в CSS:
-
-body {
-    font-family: 'DM Sans', sans-serif;
-}
-
-h1,
-h2,
-.logo {
-    font-family: 'Manrope', sans-serif;
-}
-
-И сделаем размеры:
-
-h1 {
-    font-size: 64px;
-    font-weight: 800;
-}
-
-h2 {
-    font-size: 34px;
-    font-weight: 700;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-На телефоне:
-
-@media (max-width: 700px) {
-    h1 {
-        font-size: 43px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-}
-
-Вот этот вариант уже будет крупный, современный и заметный, а не как старый книжный сайт.
-
-а можно просто целый скинь и я поменябю
-
-Да 😭 Давай вообще без кусочков. Просто замени весь код story.html целиком на этот. Тут крупный современный шрифт, красивый дизайн и RU/UA/EN уже внутри.
-
-Полный код story.html — крупный современный стиль
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>История Тани и Любы</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: 'DM Sans', sans-serif;
-    background: #f5f0e8;
-    color: #302a25;
-}
-
-
-/* HEADER */
-
-header {
-    padding: 24px 7%;
-    background: #f8f4ee;
-    border-bottom: 1px solid #ddd4ca;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: 'Manrope', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-nav a {
-    color: #62584e;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #302a25;
-}
-
-
-/* LANGUAGES */
-
-.languages {
-    display: flex;
-    gap: 6px;
-    margin-left: 10px;
-}
-
-.languages button {
-    border: 1px solid #cfc4b8;
-    background: transparent;
-
-    padding: 7px 10px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-
-    color: #40372f;
-}
-
-.languages button:hover {
-    background: #e9dfd4;
-}
-
-.languages button.active {
-    background: #302a25;
-    color: white;
-}
-
-
-/* MAIN */
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 70px 25px 90px;
-}
-
-
-/* BACK */
-
-.back {
-    display: inline-block;
-
-    margin-bottom: 25px;
-
-    color: #766858;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.back:hover {
-    text-decoration: underline;
-}
-
-
-/* ARTICLE */
-
-.article {
-    background: #fffaf4;
-
-    border: 1px solid #ded5cb;
-
-    border-radius: 18px;
-
-    padding: 65px;
-}
-
-
-/* TITLE */
-
-h1 {
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 64px;
-
-    line-height: 1.05;
-
-    letter-spacing: -2.5px;
-
-    font-weight: 800;
-
-    color: #302a25;
-
-    margin: 0 0 35px;
-
-    padding-bottom: 30px;
-
-    border-bottom: 1px solid #ddd4ca;
-}
-
-
-/* HEADINGS */
-
-h2 {
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 34px;
-
-    line-height: 1.2;
-
-    letter-spacing: -1px;
-
-    font-weight: 800;
-
-    color: #514335;
-
-    margin-top: 65px;
-
-    margin-bottom: 25px;
-}
-
-
-/* TEXT */
-
-p {
-    font-size: 18px;
-
-    line-height: 1.9;
-
-    color: #5c544c;
-
-    margin: 0 0 22px;
-}
-
-
-/* INTRO */
-
-.intro {
-    background: #f0e8de;
-
-    border-left: 4px solid #a67c52;
-
-    padding: 28px 30px;
-
-    border-radius: 0 12px 12px 0;
-
-    font-size: 19px;
-
-    line-height: 1.8;
-
-    color: #5a5046;
-
-    margin-bottom: 45px;
-}
-
-
-/* QUOTE */
-
-.quote {
-    background: #eee4d8;
-
-    padding: 32px;
-
-    margin: 40px 0;
-
-    border-radius: 14px;
-
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 24px;
-
-    line-height: 1.6;
-
-    font-weight: 600;
-
-    color: #624c38;
-}
-
-
-/* FOOTER */
-
-footer {
-    background: #3f3429;
-
-    color: #eee7df;
-
-    text-align: center;
-
-    padding: 35px;
-
-    font-size: 13px;
-
-    line-height: 1.8;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    header {
-        padding: 18px 20px;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    nav a {
-        display: none;
-    }
-
-    nav {
-        gap: 0;
-    }
-
-    .languages {
-        margin-left: 0;
-    }
-
-    main {
-        padding: 40px 15px 60px;
-    }
-
-    .article {
-        padding: 32px 23px;
-        border-radius: 14px;
-    }
-
-    h1 {
-        font-size: 43px;
-        letter-spacing: -1.5px;
-        line-height: 1.08;
-    }
-
-    h2 {
-        font-size: 28px;
-        letter-spacing: -0.5px;
-        margin-top: 45px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    .intro {
-        font-size: 16px;
-        padding: 22px;
-    }
-
-    .quote {
-        font-size: 20px;
-        padding: 24px;
-    }
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<header>
-
-    <div class="logo" id="logo">
-        108 дней благодарности
-    </div>
-
-
-    <nav>
-
-        <a href="index.html" id="home">
-            Главная
-        </a>
-
-        <a href="story.html" id="story">
-            История
-        </a>
-
-        <a href="days.html" id="days">
-            108 дней
-        </a>
-
-
-        <div class="languages">
-
-            <button onclick="changeLanguage('ru')" id="ru">
-                RU
-            </button>
-
-            <button onclick="changeLanguage('ua')" id="ua">
-                UA
-            </button>
-
-            <button onclick="changeLanguage('en')" id="en">
-                EN
-            </button>
-
-        </div>
-
-    </nav>
-
-</header>
-
-
-
-<main>
-
-
-<a class="back" href="index.html" id="back">
-    ← Вернуться на главную
-</a>
-
-
-
-<article class="article">
-
-
-<h1 id="title">
-    История Тани и Любы
-</h1>
-
-
-<div class="intro" id="intro">
-
-    История двух сестёр, которые начали писать
-    108 дней благодарности и постепенно увидели
-    изменения в своей жизни.
-
-</div>
-
-
-
-<h2 id="heading1">
-    С чего всё началось
-</h2>
-
-
-<p id="text1">
-
-    Люба находилась в Турции, когда однажды
-    увидела в Instagram информацию о практике
-    «108 благодарностей».
-
-</p>
-
-
-<p id="text2">
-
-    Она решила попробовать эту практику
-    и начала каждый день записывать благодарности.
-
-</p>
-
-
-<p id="text3">
-
-    Позже Люба рассказала об этом своей сестре Тане.
-    Так в этой истории появились две сестры,
-    которые начали идти одним путём.
-
-</p>
-
-
-
-<h2 id="heading2">
-    Таня присоединяется
-</h2>
-
-
-<p id="text4">
-
-    В то время Таня находилась на работе,
-    которая ей не нравилась.
-
-</p>
-
-
-<p id="text5">
-
-    Но, узнав о практике, Таня не стала относиться
-    к ней просто как к эксперименту.
-    Она с самого начала поверила в то,
-    что практика может что-то изменить.
-
-</p>
-
-
-<p id="text6">
-
-    Сначала она просто писала благодарности —
-    за всё хорошее, что уже было в её жизни.
-
-</p>
-
-
-
-<div class="quote" id="quote">
-
-    «Начать замечать то хорошее,
-    что уже есть в жизни».
-
-</div>
-
-
-
-<h2 id="heading3">
-    Первые изменения
-</h2>
-
-
-<p id="text7">
-
-    Постепенно Таня стала замечать,
-    что сама меняется.
-    Она стала смотреть на жизнь более позитивно.
-
-</p>
-
-
-<p id="text8">
-
-    Вместе с этим она начала замечать
-    больше возможностей и стала больше действовать.
-
-</p>
-
-
-<p id="text9">
-
-    Со временем в её жизни появились деньги
-    и работа, которая уже была связана
-    с тем, что ей нравилось.
-
-</p>
-
-
-
-<h2 id="heading4">
-    Новая жизнь Тани
-</h2>
-
-
-<p id="text10">
-
-    В какой-то момент Таня решила уйти
-    с работы, которая ей не нравилась.
-
-</p>
-
-
-<p id="text11">
-
-    После этого она почувствовала облегчение
-    и начала заниматься тем, что действительно любила.
-
-</p>
-
-
-<p id="text12">
-
-    Таня начала вести блог,
-    показывать, как красиво она шьёт,
-    примерять разные образы
-    и делиться этим с другими людьми.
-
-</p>
-
-
-<p id="text13">
-
-    Постепенно у неё появились подписчики
-    и деньги.
-    Её занятие превратилось
-    в новое направление жизни.
-
-</p>
-
-
-<p id="text14">
-
-    Позже Таня переехала в Германию
-    и продолжила заниматься тем же,
-    продолжая свой путь.
-
-</p>
-
-
-
-<h2 id="heading5">
-    Как изменилась жизнь Любы
-</h2>
-
-
-<p id="text15">
-
-    У Любы тоже постепенно
-    происходили большие изменения.
-
-</p>
-
-
-<p id="text16">
-
-    В её жизни появились квартира,
-    деньги, клиенты, машина и путешествия.
-
-</p>
-
-
-<p id="text17">
-
-    Также рядом с ней появился мужчина,
-    который много для неё делал.
-
-</p>
-
-
-<p id="text18">
-
-    Люба начала много путешествовать
-    и летать по миру.
-
-</p>
-
-
-
-<h2 id="heading6">
-    Почему эта история стала важной
-</h2>
-
-
-<p id="text19">
-
-    Для Тани и Любы практика благодарности
-    стала частью их жизни,
-    а не просто коротким экспериментом.
-
-</p>
-
-
-<p id="text20">
-
-    Люба почувствовала,
-    что благодаря этой практике
-    её жизнь действительно изменилась.
-
-</p>
-
-
-<p id="text21">
-
-    История сестёр — это их личный опыт
-    и то, как они сами воспринимают
-    произошедшие изменения.
-
-</p>
-
-
-</article>
-
-</main>
-
-
-
-<footer>
-
-    <span id="footer1">
-        108 дней благодарности
-    </span>
-
-    <br>
-
-    <span id="footer2">
-        История Тани и Любы
-    </span>
-
-</footer>
-
-
-
-<script>
-
-
-const translations = {
-
-
-ru: {
-
-logo: "108 дней благодарности",
-
-home: "Главная",
-
-story: "История",
-
-days: "108 дней",
-
-back: "← Вернуться на главную",
-
-title: "История Тани и Любы",
-
-intro: "История двух сестёр, которые начали писать 108 дней благодарности и постепенно увидели изменения в своей жизни.",
-
-heading1: "С чего всё началось",
-
-text1: "Люба находилась в Турции, когда однажды увидела в Instagram информацию о практике «108 благодарностей».",
-
-text2: "Она решила попробовать эту практику и начала каждый день записывать благодарности.",
-
-text3: "Позже Люба рассказала об этом своей сестре Тане. Так в этой истории появились две сестры, которые начали идти одним путём.",
-
-heading2: "Таня присоединяется",
-
-text4: "В то время Таня находилась на работе, которая ей не нравилась.",
-
-text5: "Но, узнав о практике, Таня не стала относиться к ней просто как к эксперименту. Она с самого начала поверила в то, что практика может что-то изменить.",
-
-text6: "Сначала она просто писала благодарности — за всё хорошее, что уже было в её жизни.",
-
-quote: "«Начать замечать то хорошее, что уже есть в жизни».",
-
-heading3: "Первые изменения",
-
-text7: "Постепенно Таня стала замечать, что сама меняется. Она стала смотреть на жизнь более позитивно.",
-
-text8: "Вместе с этим она начала замечать больше возможностей и стала больше действовать.",
-
-text9: "Со временем в её жизни появились деньги и работа, которая уже была связана с тем, что ей нравилось.",
-
-heading4: "Новая жизнь Тани",
-
-text10: "В какой-то момент Таня решила уйти с работы, которая ей не нравилась.",
-
-text11: "После этого она почувствовала облегчение и начала заниматься тем, что действительно любила.",
-
-text12: "Таня начала вести блог, показывать, как красиво она шьёт, примерять разные образы и делиться этим с другими людьми.",
-
-text13: "Постепенно у неё появились подписчики и деньги. Её занятие превратилось в новое направление жизни.",
-
-text14: "Позже Таня переехала в Германию и продолжила заниматься тем же, продолжая свой путь.",
-
-heading5: "Как изменилась жизнь Любы",
-
-text15: "У Любы тоже постепенно происходили большие изменения.",
-
-text16: "В её жизни появились квартира, деньги, клиенты, машина и путешествия.",
-
-text17: "Также рядом с ней появился мужчина, который много для неё делал.",
-
-text18: "Люба начала много путешествовать и летать по миру.",
-
-heading6: "Почему эта история стала важной",
-
-text19: "Для Тани и Любы практика благодарности стала частью их жизни, а не просто коротким экспериментом.",
-
-text20: "Люба почувствовала, что благодаря этой практике её жизнь действительно изменилась.",
-
-text21: "История сестёр — это их личный опыт и то, как они сами воспринимают произошедшие изменения.",
-
-footer1: "108 дней благодарности",
-
-footer2: "История Тани и Любы"
-
-},
-
-
-
-ua: {
-
-logo: "108 днів вдячності",
-
-home: "Головна",
-
-story: "Історія",
-
-days: "108 днів",
-
-back: "← Повернутися на головну",
-
-title: "Історія Тані та Люби",
-
-intro: "Історія двох сестер, які почали писати 108 днів вдячності та поступово побачили зміни у своєму житті.",
-
-heading1: "З чого все почалося",
-
-text1: "Люба перебувала в Туреччині, коли одного разу побачила в Instagram інформацію про практику «108 подяк».",
-
-text2: "Вона вирішила спробувати цю практику та почала щодня записувати подяки.",
-
-text3: "Пізніше Люба розповіла про це своїй сестрі Тані. Так у цій історії з'явилися дві сестри, які почали йти одним шляхом.",
-
-heading2: "Таня приєднується",
-
-text4: "У той час Таня працювала на роботі, яка їй не подобалася.",
-
-text5: "Але, дізнавшись про практику, Таня не стала ставитися до неї просто як до експерименту. Вона від самого початку повірила в те, що практика може щось змінити.",
-
-text6: "Спочатку вона просто писала подяки — за все хороше, що вже було в її житті.",
-
-quote: "«Почати помічати те хороше, що вже є в житті».",
-
-heading3: "Перші зміни",
-
-text7: "Поступово Таня почала помічати, що сама змінюється. Вона стала дивитися на життя більш позитивно.",
-
-text8: "Разом із цим вона почала помічати більше можливостей і стала більше діяти.",
-
-text9: "Згодом у її житті з'явилися гроші та робота, яка вже була пов'язана з тим, що їй подобалося.",
-
-heading4: "Нове життя Тані",
-
-text10: "У якийсь момент Таня вирішила піти з роботи, яка їй не подобалася.",
-
-text11: "Після цього вона відчула полегшення і почала займатися тим, що справді любила.",
-
-text12: "Таня почала вести блог, показувати, як красиво вона шиє, приміряти різні образи та ділитися цим з іншими людьми.",
-
-text13: "Поступово в неї з'явилися підписники та гроші. Її заняття перетворилося на новий напрямок життя.",
-
-text14: "Пізніше Таня переїхала до Німеччини та продовжила займатися тим самим, продовжуючи свій шлях.",
-
-heading5: "Як змінилося життя Люби",
-
-text15: "У Люби також поступово відбувалися великі зміни.",
-
-text16: "У її житті з'явилися квартира, гроші, клієнти, машина та подорожі.",
-
-text17: "Також поруч із нею з'явився чоловік, який багато для неї робив.",
-
-text18: "Люба почала багато подорожувати та літати по світу.",
-
-heading6: "Чому ця історія стала важливою",
-
-text19: "Для Тані та Люби практика вдячності стала частиною їхнього життя, а не просто коротким експериментом.",
-
-text20: "Люба відчула, що завдяки цій практиці її життя справді змінилося.",
-
-text21: "Історія сестер — це їхній особистий досвід і те, як вони самі сприймають зміни, що відбулися.",
-
-footer1: "108 днів вдячності",
-
-footer2: "Історія Тані та Люби"
-
-},
-
-
-
-en: {
-
-logo: "108 Days of Gratitude",
-
-home: "Home",
-
-story: "Story",
-
-days: "108 Days",
-
-back: "← Back to home",
-
-title: "The Story of Tanya and Lyuba",
-
-intro: "The story of two sisters who began writing gratitude for 108 days and gradually saw changes in their lives.",
-
-heading1: "How it all began",
-
-text1: "Lyuba was in Turkey when she came across information about the “108 Gratitudes” practice on Instagram.",
-
-text2: "She decided to try the practice and began writing down things she was grateful for every day.",
-
-text3: "Later, Lyuba told her sister Tanya about it. This is how the two sisters began following the same path.",
-
-heading2: "Tanya joins",
-
-text4: "At that time, Tanya was working at a job she did not like.",
-
-text5: "But after learning about the practice, Tanya did not treat it simply as an experiment. From the beginning, she believed that the practice could change something.",
-
-text6: "At first, she simply wrote down things she was grateful for — all the good things that were already in her life.",
-
-quote: "“Start noticing the good things that are already in your life.”",
-
-heading3: "The first changes",
-
-text7: "Gradually, Tanya began to notice that she herself was changing. She started looking at life more positively.",
-
-text8: "At the same time, she began noticing more opportunities and taking more action.",
-
-text9: "Over time, money and work connected with things she actually enjoyed began to appear in her life.",
-
-heading4: "Tanya's new life",
-
-text10: "At some point, Tanya decided to leave the job she did not like.",
-
-text11: "After that, she felt relieved and began doing what she truly loved.",
-
-text12: "Tanya started a blog, showed how beautifully she sewed, tried different looks and shared them with other people.",
-
-text13: "Gradually, she gained followers and started earning money. What she loved doing became a new direction in her life.",
-
-text14: "Later, Tanya moved to Germany and continued doing the same, continuing her journey.",
-
-heading5: "How Lyuba's life changed",
-
-text15: "Lyuba also gradually experienced major changes in her life.",
-
-text16: "She had an apartment, money, clients, a car and opportunities to travel.",
-
-text17: "A man also appeared in her life who did a lot for her.",
-
-text18: "Lyuba began travelling and flying around the world.",
-
-heading6: "Why this story became important",
-
-text19: "For Tanya and Lyuba, the gratitude practice became a part of their lives rather than just a short experiment.",
-
-text20: "Lyuba felt that her life had truly changed through this practice.",
-
-text21: "The sisters' story is their personal experience and the way they themselves understand the changes that happened.",
-
-footer1: "108 Days of Gratitude",
-
-footer2: "The Story of Tanya and Lyuba"
-
-}
-
-};
-
-
-
-function changeLanguage(language) {
-
-    const t = translations[language];
-
-    document.getElementById("logo").textContent = t.logo;
-
-    document.getElementById("home").textContent = t.home;
-    document.getElementById("story").textContent = t.story;
-    document.getElementById("days").textContent = t.days;
-
-    document.getElementById("back").textContent = t.back;
-
-    document.getElementById("title").textContent = t.title;
-
-    document.getElementById("intro").textContent = t.intro;
-
-    document.getElementById("heading1").textContent = t.heading1;
-    document.getElementById("text1").textContent = t.text1;
-    document.getElementById("text2").textContent = t.text2;
-    document.getElementById("text3").textContent = t.text3;
-
-    document.getElementById("heading2").textContent = t.heading2;
-    document.getElementById("text4").textContent = t.text4;
-    document.getElementById("text5").textContent = t.text5;
-    document.getElementById("text6").textContent = t.text6;
-
-    document.getElementById("quote").textContent = t.quote;
-
-    document.getElementById("heading3").textContent = t.heading3;
-    document.getElementById("text7").textContent = t.text7;
-    document.getElementById("text8").textContent = t.text8;
-    document.getElementById("text9").textContent = t.text9;
-
-    document.getElementById("heading4").textContent = t.heading4;
-    document.getElementById("text10").textContent = t.text10;
-    document.getElementById("text11").textContent = t.text11;
-    document.getElementById("text12").textContent = t.text12;
-    document.getElementById("text13").textContent = t.text13;
-    document.getElementById("text14").textContent = t.text14;
-
-    document.getElementById("heading5").textContent = t.heading5;
-    document.getElementById("text15").textContent = t.text15;
-    document.getElementById("text16").textContent = t.text16;
-    document.getElementById("text17").textContent = t.text17;
-    document.getElementById("text18").textContent = t.text18;
-
-    document.getElementById("heading6").textContent = t.heading6;
-    document.getElementById("text19").textContent = t.text19;
-    document.getElementById("text20").textContent = t.text20;
-    document.getElementById("text21").textContent = t.text21;
-
-    document.getElementById("footer1").textContent = t.footer1;
-    document.getElementById("footer2").textContent = t.footer2;
-
-    document.getElementById("ru").classList.remove("active");
-    document.getElementById("ua").classList.remove("active");
-    document.getElementById("en").classList.remove("active");
-
-    document.getElementById(language).classList.add("active");
-
-    document.documentElement.lang = language;
-}
-
-
-changeLanguage("ru");
-
-</script>
-
-</body>
-
-</html>
-
-После вставки: Ctrl + A → вставляешь → Commit changes → открываешь страницу и нажимаешь Ctrl + F5.
-
-у меня вооьбще теперь там пусто
-
-Да, понял 😭 Скорее всего, при вставке кусок кода сломался. Не переживай, файл можно восстановить.
-
-Давай сейчас не будем ничего выдумывать и не будем менять дизайн.
-
-Сделай так:
-
-Открой story.html на GitHub.
-Нажми ✏️ Edit this file.
-Ctrl + A.
-Вставь тот код, который ты присылала мне изначально.
-Нажми Commit changes.
-
-Если ты уже нажала Commit с пустым/сломавшимся кодом — тоже не страшно. GitHub хранит предыдущую версию файла.
-
-Если хочешь, я могу провести тебя по восстановлению старой версии буквально по одному нажатию.
+```
