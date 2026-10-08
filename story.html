@@ -1,372 +1,243 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>История Тани и Любы</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f3ed;
-            color: #29251f;
-        }
-
-        header {
-            background: white;
-            border-bottom: 1px solid #ddd6cc;
-            padding: 18px 35px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 23px;
-            font-weight: bold;
-            color: #765c3d;
-        }
-
-        nav a {
-            color: #5f5040;
-            text-decoration: none;
-            margin-left: 25px;
-        }
-
-        nav a:hover {
-            color: #a67c52;
-        }
-
-        main {
-            max-width: 850px;
-            margin: 50px auto;
-            padding: 0 25px 60px;
-        }
-
-        .article {
-            background: white;
-            padding: 45px;
-            border: 1px solid #ddd6cc;
-            border-radius: 15px;
-        }
-
-        h1 {
-            font-size: 40px;
-            color: #60482f;
-            margin-top: 0;
-            border-bottom: 1px solid #d9d0c5;
-            padding-bottom: 15px;
-        }
-
-        h2 {
-            color: #765536;
-            margin-top: 40px;
-        }
-
-        p {
-            font-size: 17px;
-            line-height: 1.8;
-            color: #4e4943;
-        }
-
-        .intro {
-            font-size: 19px;
-            background: #f1e9df;
-            padding: 20px;
-            border-left: 4px solid #a67c52;
-            margin: 25px 0;
-        }
-
-        .quote {
-            background: #eee5d9;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 10px;
-            font-style: italic;
-            color: #60482f;
-        }
-
-        .back {
-            display: inline-block;
-            margin-bottom: 25px;
-            color: #765536;
-            text-decoration: none;
-        }
-
-        .back:hover {
-            text-decoration: underline;
-        }
 
-        footer {
-            background: #3f3429;
-            color: #eee7df;
-            text-align: center;
-            padding: 30px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        @media (max-width: 700px) {
+<title>История Тани и Любы</title>
 
-            header {
-                padding: 15px 20px;
-            }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-            nav {
-                display: none;
-            }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-            main {
-                margin: 25px auto;
-                padding: 0 15px 40px;
-            }
+<style>
 
-            .article {
-                padding: 25px 20px;
-            }
+* {
+    box-sizing: border-box;
+}
 
-            h1 {
-                font-size: 31px;
-            }
+html {
+    scroll-behavior: smooth;
+}
 
-            p {
-                font-size: 16px;
-            }
-        }
-    </style>
-</head>
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    background: #f5f0e8;
+    color: #302a25;
+}
 
-<body>
 
-<header>
+/* HEADER */
 
-    <div class="logo">
-        108 дней благодарностей
-    </div>
+header {
+    padding: 24px 7%;
+    background: #f8f4ee;
+    border-bottom: 1px solid #ddd4ca;
 
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="story.html">История</a>
-        <a href="days.html">108 дней</a>
-    </nav>
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-</header>
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
 
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
 
-<main>
+nav a {
+    color: #62584e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-    <a class="back" href="index.html">
-        ← Вернуться на главную
-    </a>
+nav a:hover {
+    color: #302a25;
+}
 
 
-    <article class="article">
+/* LANGUAGES */
 
-        <h1>История Тани и Любы</h1>
+.languages {
+    display: flex;
+    gap: 6px;
+    margin-left: 10px;
+}
 
+.languages button {
+    border: 1px solid #cfc4b8;
+    background: transparent;
 
-        <div class="intro">
+    padding: 7px 10px;
 
-            Эта история началась не тогда, когда
-            всё было хорошо.
+    border-radius: 8px;
 
-            Она началась в период, когда жизнь
-            была совсем нестабильной.
+    cursor: pointer;
 
-        </div>
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
 
+    color: #40372f;
+}
 
-        <h2>Начало</h2>
+.languages button:hover {
+    background: #e9dfd4;
+}
 
-        <p>
-            Таня переехала в Турцию в период,
-            когда в её жизни практически не было
-            привычной стабильности.
-        </p>
+.languages button.active {
+    background: #302a25;
+    color: white;
+}
 
-        <p>
-            Не было работы, не было денег,
-            а впереди было много неизвестности.
-            Нужно было привыкать к новой стране
-            и одновременно думать о том,
-            что делать дальше.
-        </p>
 
-        <p>
-            Это был период, когда легко было
-            сосредоточиться только на проблемах.
-            Казалось, что сначала нужно решить
-            всё сложное, а уже потом думать
-            о хорошем.
-        </p>
+/* MAIN */
 
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 25px 90px;
+}
 
-        <h2>Откуда появилась идея</h2>
 
-        <p>
-            Однажды Таня услышала в Instagram
-            о практике благодарности.
-        </p>
+/* BACK */
 
-        <p>
-            Суть была очень простой:
-            каждый день записывать несколько вещей,
-            за которые ты благодарен.
-        </p>
+.back {
+    display: inline-block;
 
-        <p>
-            На первый взгляд это казалось
-            слишком простым.
-        </p>
+    margin-bottom: 25px;
 
-        <p>
-            Но Таня решила попробовать.
-        </p>
+    color: #766858;
 
+    text-decoration: none;
 
-        <div class="quote">
+    font-size: 14px;
+    font-weight: 500;
+}
 
-            «За что я могу быть благодарна,
-            если сейчас у меня почти ничего нет?»
+.back:hover {
+    text-decoration: underline;
+}
 
-        </div>
 
+/* ARTICLE */
 
-        <p>
-            Именно этот вопрос стал одним из первых,
-            который заставил её посмотреть
-            на ситуацию немного по-другому.
-        </p>
+.article {
+    background: #fffaf4;
 
-        <p>
-            Она начала искать благодарность
-            не только в больших событиях,
-            но и в самых обычных вещах.
-        </p>
+    border: 1px solid #ded5cb;
 
+    border-radius: 18px;
 
-        <h2>Первые благодарности</h2>
+    padding: 65px;
+}
 
-        <p>
-            Иногда благодарить было легко.
-            А иногда приходилось действительно
-            задумываться.
-        </p>
 
-        <p>
-            Благодарностью могла стать возможность
-            проснуться утром, хорошая погода,
-            вкусная еда, разговор с близким человеком
-            или просто возможность находиться
-            в новом месте.
-        </p>
+/* TITLE */
 
-        <p>
-            Постепенно Таня заметила,
-            что начинает смотреть на свой день
-            немного иначе.
-        </p>
+h1 {
+    font-family: 'Manrope', sans-serif;
 
+    font-size: 64px;
 
-        <h2>Люба присоединяется</h2>
+    line-height: 1.05;
 
-        <p>
-            Со временем к этой истории
-            присоединилась её сестра Люба.
-        </p>
+    letter-spacing: -2.5px;
 
-        <p>
-            Вместе они продолжили этот путь,
-            каждый день возвращаясь к одной
-            простой привычке — замечать хорошее
-            и записывать его.
-        </p>
+    font-weight: 800;
 
-        <p>
-            Для них это стало не соревнованием
-            и не способом сделать вид,
-            что проблем не существует.
-        </p>
+    color: #302a25;
 
-        <p>
-            Это стало возможностью остановиться
-            хотя бы на несколько минут и посмотреть
-            на свою жизнь с другой стороны.
-        </p>
+    margin: 0 0 35px;
 
+    padding-bottom: 30px;
 
-        <h2>Постепенные изменения</h2>
+    border-bottom: 1px solid #ddd4ca;
+}
 
-        <p>
-            Жизнь не изменилась мгновенно.
-        </p>
 
-        <p>
-            Благодарности не принесли работу
-            за одну ночь и не решили финансовые
-            проблемы сами по себе.
-        </p>
+/* HEADINGS */
 
-        <p>
-            Но постепенно начали меняться
-            сами Таня и Люба.
-        </p>
+h2 {
+    font-family: 'Manrope', sans-serif;
 
-        <p>
-            Они стали чаще замечать свои маленькие
-            успехи, ставить цели и обращать внимание
-            на возможности, которые раньше могли
-            пройти мимо.
-        </p>
+    font-size: 34px;
 
-        <p>
-            Маленькие изменения начали складываться
-            в более большие.
-        </p>
+    line-height: 1.2;
 
+    letter-spacing: -1px;
 
-        <h2>Почему эта история важна</h2>
+    font-weight: 800;
 
-        <p>
-            История Тани и Любы не о том,
-            что достаточно написать несколько
-            благодарностей — и жизнь сразу станет
-            идеальной.
-        </p>
+    color: #514335;
 
-        <p>
-            Она о другом.
-        </p>
+    margin-top: 65px;
 
-        <p>
-            Иногда изменить всё сразу невозможно.
-            Но можно изменить то, на что ты
-            обращаешь внимание каждый день.
-        </p>
+    margin-bottom: 25px;
+}
 
-        <p>
-            А уже из маленьких ежедневных изменений
-            постепенно могут появиться большие.
-        </p>
 
-    </article>
+/* TEXT */
 
-</main>
+p {
+    font-size: 18px;
 
+    line-height: 1.9;
 
-<footer>
+    color: #5c544c;
 
-    108 дней благодарностей
+    margin: 0 0 22px;
+}
 
-    <br>
 
-    История Тани и Любы
+/* INTRO */
 
-</footer>
+.intro {
+    background: #f0e8de;
 
-</body>
-</html>
+    border-left: 4px solid #a67c52;
+
+    padding: 28px 30px;
+
+    border-radius: 0 12px 12px 0;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #5a5046;
+
+    margin-bottom: 45px;
+}
+
+
+/* QUOTE */
+
+.quote {
+    background: #eee4d8;
+
+    padding: 32px;
+
+    margin: 40px 0;
+
+    border-radius: 14px;
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 24px;
+
+    l
+```
