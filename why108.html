@@ -1,0 +1,463 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Почему 108? — 108 дней</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            background: #f7f3ed;
+            color: #29251f;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #ddd6cc;
+            padding: 22px 45px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: "Manrope", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #60482f;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #5f5040;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #a67c52;
+        }
+
+        .languages {
+            display: flex;
+            gap: 6px;
+            margin-left: 10px;
+        }
+
+        .languages button {
+            border: 1px solid #d5c8b9;
+            background: white;
+            color: #60482f;
+            padding: 6px 9px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .languages button.active {
+            background: #60482f;
+            color: white;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 60px auto;
+            padding: 0 20px 80px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #765536;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .article {
+            background: white;
+            border: 1px solid #ddd6cc;
+            border-radius: 22px;
+            padding: 60px;
+        }
+
+        h1 {
+            font-family: "Manrope", sans-serif;
+            font-size: 48px;
+            line-height: 1.12;
+            letter-spacing: -1px;
+            font-weight: 700;
+            color: #4e3b29;
+            margin: 0 0 25px;
+        }
+
+        .intro {
+            background: #f1e9df;
+            border-left: 4px solid #a67c52;
+            border-radius: 0 15px 15px 0;
+            padding: 24px;
+            font-size: 19px;
+            line-height: 1.65;
+            margin-bottom: 55px;
+        }
+
+        h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+            color: #60482f;
+            margin-top: 55px;
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #4e4943;
+            margin: 16px 0;
+        }
+
+        .quote {
+            background: #eee5d9;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-size: 19px;
+            line-height: 1.6;
+            font-weight: 500;
+            color: #60482f;
+        }
+
+        footer {
+            background: #3f3429;
+            color: #eee7df;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 18px 20px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                margin: 25px auto;
+                padding: 0 15px 45px;
+            }
+
+            .article {
+                padding: 30px 22px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 17px;
+                line-height: 1.7;
+            }
+
+            .intro {
+                font-size: 18px;
+            }
+
+            .quote {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo" id="logo">
+        108 дней благодарности
+    </div>
+
+    <nav>
+
+        <a href="index.html" id="home">
+            Главная
+        </a>
+
+        <a href="story.html" id="story">
+            История
+        </a>
+
+        <a href="days.html" id="days">
+            108 дней
+        </a>
+
+        <div class="languages">
+
+            <button onclick="setLanguage('ru')" id="ru">RU</button>
+            <button onclick="setLanguage('ua')" id="ua">UA</button>
+            <button onclick="setLanguage('en')" id="en">EN</button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <a href="index.html" class="back" id="back">
+        ← Вернуться на главную
+    </a>
+
+    <article class="article">
+
+        <h1 id="title">
+            Почему 108?
+        </h1>
+
+        <div class="intro" id="intro">
+            Число 108 стало важной частью практики благодарности,
+            с которой началась история Любы и Тани.
+        </div>
+
+        <h2 id="firstTitle">
+            Особое число
+        </h2>
+
+        <p id="firstText">
+            Для Любы и Тани число 108 стало частью практики,
+            которую они начали выполнять каждый день.
+        </p>
+
+        <h2 id="spiritualTitle">
+            Духовное значение
+        </h2>
+
+        <p id="spiritualText">
+            108 воспринимается как особое духовное число.
+            Именно поэтому в практике используется такое
+            количество благодарностей.
+        </p>
+
+        <div class="quote" id="quote">
+            108 — число, которое стало символом их ежедневной практики благодарности.
+        </div>
+
+        <h2 id="practiceTitle">
+            Почему именно 108 благодарностей?
+        </h2>
+
+        <p id="practiceText">
+            Каждый день практика предполагала написание
+            108 благодарностей. Со временем это стало
+            привычной частью пути Любы, а затем и Тани.
+        </p>
+
+        <h2 id="meaningTitle">
+            Что 108 означало для сестёр
+        </h2>
+
+        <p id="meaningText">
+            Для них это было не просто число.
+            108 стало частью истории, с которой начались
+            изменения в их жизни.
+        </p>
+
+    </article>
+
+</main>
+
+<footer>
+
+    <span id="footer1">
+        108 дней благодарности
+    </span>
+
+    <br>
+
+    <span id="footer2">
+        История Любы и Тани
+    </span>
+
+</footer>
+
+<script>
+
+const translations = {
+
+    ru: {
+        logo: "108 дней благодарности",
+        home: "Главная",
+        story: "История",
+        days: "108 дней",
+        back: "← Вернуться на главную",
+
+        title: "Почему 108?",
+
+        intro: "Число 108 стало важной частью практики благодарности, с которой началась история Любы и Тани.",
+
+        firstTitle: "Особое число",
+
+        firstText: "Для Любы и Тани число 108 стало частью практики, которую они начали выполнять каждый день.",
+
+        spiritualTitle: "Духовное значение",
+
+        spiritualText: "108 воспринимается как особое духовное число. Именно поэтому в практике используется такое количество благодарностей.",
+
+        quote: "108 — число, которое стало символом их ежедневной практики благодарности.",
+
+        practiceTitle: "Почему именно 108 благодарностей?",
+
+        practiceText: "Каждый день практика предполагала написание 108 благодарностей. Со временем это стало привычной частью пути Любы, а затем и Тани.",
+
+        meaningTitle: "Что 108 означало для сестёр",
+
+        meaningText: "Для них это было не просто число. 108 стало частью истории, с которой начались изменения в их жизни.",
+
+        footer1: "108 дней благодарности",
+        footer2: "История Любы и Тани"
+    },
+
+    ua: {
+        logo: "108 днів вдячності",
+        home: "Головна",
+        story: "Історія",
+        days: "108 днів",
+        back: "← Повернутися на головну",
+
+        title: "Чому 108?",
+
+        intro: "Число 108 стало важливою частиною практики вдячності, з якої почалася історія Люби та Тані.",
+
+        firstTitle: "Особливе число",
+
+        firstText: "Для Люби та Тані число 108 стало частиною практики, яку вони почали виконувати щодня.",
+
+        spiritualTitle: "Духовне значення",
+
+        spiritualText: "108 сприймається як особливе духовне число. Саме тому в практиці використовується така кількість подяк.",
+
+        quote: "108 — число, яке стало символом їхньої щоденної практики вдячності.",
+
+        practiceTitle: "Чому саме 108 подяк?",
+
+        practiceText: "Щодня практика передбачала написання 108 подяк. Згодом це стало звичною частиною шляху Люби, а потім і Тані.",
+
+        meaningTitle: "Що 108 означало для сестер",
+
+        meaningText: "Для них це було не просто число. 108 стало частиною історії, з якої почалися зміни в їхньому житті.",
+
+        footer1: "108 днів вдячності",
+        footer2: "Історія Люби та Тані"
+    },
+
+    en: {
+        logo: "108 Days of Gratitude",
+        home: "Home",
+        story: "Story",
+        days: "108 Days",
+        back: "← Back to home",
+
+        title: "Why 108?",
+
+        intro: "The number 108 became an important part of the gratitude practice that began the story of Lyuba and Tanya.",
+
+        firstTitle: "A special number",
+
+        firstText: "For Lyuba and Tanya, the number 108 became part of a practice they began doing every day.",
+
+        spiritualTitle: "Spiritual meaning",
+
+        spiritualText: "108 is perceived as a special spiritual number. This is why the practice uses this number of gratitude entries.",
+
+        quote: "108 — a number that became a symbol of their daily gratitude practice.",
+
+        practiceTitle: "Why exactly 108 gratitudes?",
+
+        practiceText: "Each day, the practice involved writing 108 gratitude entries. Over time, it became a familiar part of Lyuba's journey and then Tanya's.",
+
+        meaningTitle: "What 108 meant to the sisters",
+
+        meaningText: "For them, it was not just a number. 108 became part of the story through which changes began in their lives.",
+
+        footer1: "108 Days of Gratitude",
+        footer2: "The Story of Lyuba and Tanya"
+    }
+};
+
+function setLanguage(language) {
+
+    const t = translations[language];
+
+    for (const key in t) {
+
+        const element = document.getElementById(key);
+
+        if (element) {
+            element.textContent = t[key];
+        }
+    }
+
+    document.documentElement.lang =
+        language === "ua" ? "uk" : language;
+
+    document.querySelectorAll(".languages button").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.getElementById(language).classList.add("active");
+
+    localStorage.setItem("language", language);
+}
+
+const savedLanguage =
+    localStorage.getItem("language") || "ru";
+
+setLanguage(savedLanguage);
+
+</script>
+
+</body>
+</html>
+```
