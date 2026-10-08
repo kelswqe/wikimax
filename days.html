@@ -1,0 +1,489 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>108 дней — 108 дней благодарности</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            background: #f7f3ed;
+            color: #29251f;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #ddd6cc;
+            padding: 22px 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: "Manrope", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #60482f;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #5f5040;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #a67c52;
+        }
+
+        .languages {
+            display: flex;
+            gap: 6px;
+            margin-left: 10px;
+        }
+
+        .languages button {
+            border: 1px solid #d5c8b9;
+            background: white;
+            color: #60482f;
+            padding: 6px 9px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .languages button.active {
+            background: #60482f;
+            color: white;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 60px auto;
+            padding: 0 20px 80px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #765536;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .article {
+            background: white;
+            border: 1px solid #ddd6cc;
+            border-radius: 22px;
+            padding: 60px;
+        }
+
+        h1 {
+            font-family: "Manrope", sans-serif;
+            font-size: 48px;
+            line-height: 1.12;
+            letter-spacing: -1px;
+            font-weight: 700;
+            color: #4e3b29;
+            margin: 0 0 25px;
+        }
+
+        .intro {
+            background: #f1e9df;
+            border-left: 4px solid #a67c52;
+            border-radius: 0 15px 15px 0;
+            padding: 24px;
+            font-size: 19px;
+            line-height: 1.65;
+            margin-bottom: 55px;
+        }
+
+        h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+            color: #60482f;
+            margin-top: 55px;
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #4e4943;
+            margin: 16px 0;
+        }
+
+        .quote {
+            background: #eee5d9;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-size: 19px;
+            line-height: 1.6;
+            font-weight: 500;
+            color: #60482f;
+        }
+
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .day {
+            background: #f7f1e9;
+            border: 1px solid #e1d6ca;
+            border-radius: 12px;
+            padding: 18px 10px;
+            text-align: center;
+            color: #60482f;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #3f3429;
+            color: #eee7df;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 18px 20px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                margin: 25px auto;
+                padding: 0 15px 45px;
+            }
+
+            .article {
+                padding: 30px 22px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 17px;
+                line-height: 1.7;
+            }
+
+            .intro {
+                font-size: 18px;
+            }
+
+            .quote {
+                font-size: 18px;
+            }
+
+            .days-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo" id="logo">
+        108 дней благодарности
+    </div>
+
+    <nav>
+
+        <a href="index.html" id="home">Главная</a>
+
+        <a href="story.html" id="story">История</a>
+
+        <a href="days.html" id="days">108 дней</a>
+
+        <div class="languages">
+            <button onclick="setLanguage('ru')" id="ru">RU</button>
+            <button onclick="setLanguage('ua')" id="ua">UA</button>
+            <button onclick="setLanguage('en')" id="en">EN</button>
+        </div>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <a href="index.html" class="back" id="back">
+        ← Вернуться на главную
+    </a>
+
+    <article class="article">
+
+        <h1 id="title">
+            108 дней
+        </h1>
+
+        <div class="intro" id="intro">
+            108 дней — это путь ежедневной практики благодарности,
+            который прошли Люба и Таня.
+        </div>
+
+        <h2 id="practiceTitle">
+            Каждый день — благодарности
+        </h2>
+
+        <p id="practiceText">
+            Суть практики заключалась в том, чтобы каждый день
+            писать благодарности. Люба начала этот путь первой,
+            а затем к практике присоединилась Таня.
+        </p>
+
+        <div class="quote" id="quote">
+            Не один день, а целый путь из 108 дней.
+        </div>
+
+        <h2 id="meaningTitle">
+            Почему важна последовательность
+        </h2>
+
+        <p id="meaningText">
+            Практика стала частью их повседневной жизни.
+            День за днём они продолжали писать благодарности
+            и замечать то, за что могут быть благодарны.
+        </p>
+
+        <h2 id="pathTitle">
+            Путь двух сестёр
+        </h2>
+
+        <p id="pathText">
+            Для Любы и Тани 108 дней стали не просто
+            количеством записей. Это был период,
+            который они связывают с изменениями в своей жизни.
+        </p>
+
+        <h2 id="numberTitle">
+            108 дней — начало изменений
+        </h2>
+
+        <p id="numberText">
+            История сестёр показывает их личный опыт:
+            они начали с ежедневной благодарности,
+            а постепенно стали замечать изменения
+            в своей жизни.
+        </p>
+
+        <div class="days-grid">
+
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">...</div>
+            <div class="day">106</div>
+            <div class="day">107</div>
+            <div class="day">108</div>
+
+        </div>
+
+    </article>
+
+</main>
+
+<footer>
+
+    <span id="footer1">
+        108 дней благодарности
+    </span>
+
+    <br>
+
+    <span id="footer2">
+        История Любы и Тани
+    </span>
+
+</footer>
+
+<script>
+
+const translations = {
+
+    ru: {
+        logo: "108 дней благодарности",
+        home: "Главная",
+        story: "История",
+        days: "108 дней",
+        back: "← Вернуться на главную",
+
+        title: "108 дней",
+
+        intro: "108 дней — это путь ежедневной практики благодарности, который прошли Люба и Таня.",
+
+        practiceTitle: "Каждый день — благодарности",
+
+        practiceText: "Суть практики заключалась в том, чтобы каждый день писать благодарности. Люба начала этот путь первой, а затем к практике присоединилась Таня.",
+
+        quote: "Не один день, а целый путь из 108 дней.",
+
+        meaningTitle: "Почему важна последовательность",
+
+        meaningText: "Практика стала частью их повседневной жизни. День за днём они продолжали писать благодарности и замечать то, за что могут быть благодарны.",
+
+        pathTitle: "Путь двух сестёр",
+
+        pathText: "Для Любы и Тани 108 дней стали не просто количеством записей. Это был период, который они связывают с изменениями в своей жизни.",
+
+        numberTitle: "108 дней — начало изменений",
+
+        numberText: "История сестёр показывает их личный опыт: они начали с ежедневной благодарности, а постепенно стали замечать изменения в своей жизни.",
+
+        footer1: "108 дней благодарности",
+        footer2: "История Любы и Тани"
+    },
+
+    ua: {
+        logo: "108 днів вдячності",
+        home: "Головна",
+        story: "Історія",
+        days: "108 днів",
+        back: "← Повернутися на головну",
+
+        title: "108 днів",
+
+        intro: "108 днів — це шлях щоденної практики вдячності, який пройшли Люба та Таня.",
+
+        practiceTitle: "Щодня — подяки",
+
+        practiceText: "Суть практики полягала в тому, щоб щодня писати подяки. Люба почала цей шлях першою, а потім до практики приєдналася Таня.",
+
+        quote: "Не один день, а цілий шлях із 108 днів.",
+
+        meaningTitle: "Чому важлива послідовність",
+
+        meaningText: "Практика стала частиною їхнього повсякденного життя. День за днем вони продовжували писати подяки та помічати те, за що можуть бути вдячними.",
+
+        pathTitle: "Шлях двох сестер",
+
+        pathText: "Для Люби та Тані 108 днів стали не просто кількістю записів. Це був період, який вони пов'язують зі змінами у своєму житті.",
+
+        numberTitle: "108 днів — початок змін",
+
+        numberText: "Історія сестер показує їхній особистий досвід: вони почали зі щоденної вдячності, а поступово почали помічати зміни у своєму житті.",
+
+        footer1: "108 днів вдячності",
+        footer2: "Історія Люби та Тані"
+    },
+
+    en: {
+        logo: "108 Days of Gratitude",
+        home: "Home",
+        story: "Story",
+        days: "108 Days",
+        back: "← Back to home",
+
+        title: "108 Days",
+
+        intro: "108 days is the journey of daily gratitude practice that Lyuba and Tanya followed.",
+
+        practiceTitle: "Every day — gratitude",
+
+        practiceText: "The practice was based on writing gratitude entries every day. Lyuba started the journey first, and Tanya later joined the practice.",
+
+        quote: "Not just one day, but a whole journey of 108 days.",
+
+        meaningTitle: "Why consistency matters",
+
+        meaningText: "The practice became part of their everyday lives. Day by day, they continued writing gratitude entries and noticing things they could be grateful for.",
+
+        pathTitle: "The journey of two sisters",
+
+        pathText: "For Lyuba and Tanya, the 108 days became more than just a number of entries. It was a period they associate with changes in their lives.",
+
+        numberTitle: "108 days — the beginning of change",
+
+        numberText: "The sisters' story reflects their personal experience: they began with daily gratitude and gradually started noticing changes in their lives.",
+
+        footer1: "108 Days of Gratitude",
+        footer2: "The Story of Lyuba and Tanya"
+    }
+};
+
+function setLanguage(language) {
+
+    const t = translations[language];
+
+    for (const key in t) {
+
+        const element = document.getElementById(key);
+
+        if (element) {
+            element.textContent = t[key];
+        }
+    }
+
+    document.documentElement.lang =
+        language === "ua" ? "uk" : language;
+
+    document.querySelectorAll(".languages button").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.getElementById(language).classList.add("active");
+
+    localStorage.setItem("language", language);
+}
+
+const savedLanguage =
+    localStorage.getItem("language") || "ru";
+
+setLanguage(savedLanguage);
+
+</script>
+
+</body>
+</html>
+```
